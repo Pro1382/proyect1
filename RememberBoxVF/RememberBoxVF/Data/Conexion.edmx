@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="evento_wtcModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="clientesexpo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreNovio" Type="varchar" MaxLength="100" />
+          <Property Name="NombreNovia" Type="varchar" MaxLength="100" />
+          <Property Name="Correo" Type="varchar" MaxLength="45" />
+          <Property Name="FechaBoda" Type="date" />
+          <Property Name="telefono1" Type="varchar" MaxLength="25" />
+          <Property Name="cabina" Type="int" />
+          <Property Name="alfombra" Type="int" />
+          <Property Name="espejo" Type="int" />
+          <Property Name="tipies" Type="int" />
+          <Property Name="letras" Type="int" />
+          <Property Name="fotos" Type="int" />
+          <Property Name="precio_cabina" Type="double" />
+          <Property Name="precio_alfombra" Type="double" />
+          <Property Name="precio_espejo" Type="double" />
+          <Property Name="precio_tipies" Type="double" />
+          <Property Name="precio_letras" Type="double" />
+          <Property Name="precio_fotos" Type="double" />
+          <Property Name="observacion" Type="varchar" MaxLength="500" />
+          <Property Name="evento" Type="varchar" MaxLength="200" />
+          <Property Name="idEvento" Type="int" />
+        </EntityType>
+        <EntityType Name="contratos">
+          <Key>
+            <PropertyRef Name="Id_Contrato" />
+          </Key>
+          <Property Name="Id_Contrato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Jardin" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="FechaEv" Type="date" />
+          <Property Name="Servicios" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Precio" Type="int" Nullable="false" />
+          <Property Name="FormaPago" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="FechaEm" Type="date" />
+        </EntityType>
+        <EntityType Name="evento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="2000" Nullable="false" />
+          <Property Name="fecha" Type="date" />
+          <Property Name="estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="jardin">
+          <Key>
+            <PropertyRef Name="Id_Jardin" />
+          </Key>
+          <Property Name="Id_Jardin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomEnc" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="NomJar" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="servicios">
+          <Key>
+            <PropertyRef Name="Id_servicio" />
+          </Key>
+          <Property Name="Id_servicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Servicio" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Precio" Type="int" Nullable="false" />
+          <Property Name="Propiedades" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Usuario" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="evento_wtcModelStoreContainer">
+          <EntitySet Name="clientesexpo" EntityType="Self.clientesexpo" Schema="evento_wtc" store:Type="Tables" />
+          <EntitySet Name="contratos" EntityType="Self.contratos" Schema="evento_wtc" store:Type="Tables" />
+          <EntitySet Name="evento" EntityType="Self.evento" Schema="evento_wtc" store:Type="Tables" />
+          <EntitySet Name="jardin" EntityType="Self.jardin" Schema="evento_wtc" store:Type="Tables" />
+          <EntitySet Name="servicios" EntityType="Self.servicios" Schema="evento_wtc" store:Type="Tables" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="evento_wtc" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="evento_wtcModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="clientesexpo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreNovio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NombreNovia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="FechaBoda" Type="DateTime" />
+          <Property Name="telefono1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="cabina" Type="Int32" />
+          <Property Name="alfombra" Type="Int32" />
+          <Property Name="espejo" Type="Int32" />
+          <Property Name="tipies" Type="Int32" />
+          <Property Name="letras" Type="Int32" />
+          <Property Name="fotos" Type="Int32" />
+          <Property Name="precio_cabina" Type="Double" />
+          <Property Name="precio_alfombra" Type="Double" />
+          <Property Name="precio_espejo" Type="Double" />
+          <Property Name="precio_tipies" Type="Double" />
+          <Property Name="precio_letras" Type="Double" />
+          <Property Name="precio_fotos" Type="Double" />
+          <Property Name="observacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="evento" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="idEvento" Type="Int32" />
+        </EntityType>
+        <EntityType Name="contratos">
+          <Key>
+            <PropertyRef Name="Id_Contrato" />
+          </Key>
+          <Property Name="Id_Contrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Jardin" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaEv" Type="DateTime" />
+          <Property Name="FechaEm" Type="DateTime" />
+          <Property Name="Servicios" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Precio" Type="Int32" Nullable="false" />
+          <Property Name="FormaPago" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="evento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" />
+          <Property Name="estado" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="jardin">
+          <Key>
+            <PropertyRef Name="Id_Jardin" />
+          </Key>
+          <Property Name="Id_Jardin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomEnc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NomJar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="servicios">
+          <Key>
+            <PropertyRef Name="Id_servicio" />
+          </Key>
+          <Property Name="Id_servicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Servicio" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Precio" Type="Int32" Nullable="false" />
+          <Property Name="Propiedades" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="evento_wtcEntities10" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="clientesexpo" EntityType="Self.clientesexpo" />
+          <EntitySet Name="contratos" EntityType="Self.contratos" />
+          <EntitySet Name="evento" EntityType="Self.evento" />
+          <EntitySet Name="jardin" EntityType="Self.jardin" />
+          <EntitySet Name="servicios" EntityType="Self.servicios" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="evento_wtcModelStoreContainer" CdmEntityContainer="evento_wtcEntities10">
+          <EntitySetMapping Name="clientesexpo">
+            <EntityTypeMapping TypeName="evento_wtcModel.clientesexpo">
+              <MappingFragment StoreEntitySet="clientesexpo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreNovio" ColumnName="NombreNovio" />
+                <ScalarProperty Name="NombreNovia" ColumnName="NombreNovia" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="FechaBoda" ColumnName="FechaBoda" />
+                <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+                <ScalarProperty Name="cabina" ColumnName="cabina" />
+                <ScalarProperty Name="alfombra" ColumnName="alfombra" />
+                <ScalarProperty Name="espejo" ColumnName="espejo" />
+                <ScalarProperty Name="tipies" ColumnName="tipies" />
+                <ScalarProperty Name="letras" ColumnName="letras" />
+                <ScalarProperty Name="fotos" ColumnName="fotos" />
+                <ScalarProperty Name="precio_cabina" ColumnName="precio_cabina" />
+                <ScalarProperty Name="precio_alfombra" ColumnName="precio_alfombra" />
+                <ScalarProperty Name="precio_espejo" ColumnName="precio_espejo" />
+                <ScalarProperty Name="precio_tipies" ColumnName="precio_tipies" />
+                <ScalarProperty Name="precio_letras" ColumnName="precio_letras" />
+                <ScalarProperty Name="precio_fotos" ColumnName="precio_fotos" />
+                <ScalarProperty Name="observacion" ColumnName="observacion" />
+                <ScalarProperty Name="evento" ColumnName="evento" />
+                <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contratos">
+            <EntityTypeMapping TypeName="evento_wtcModel.contratos">
+              <MappingFragment StoreEntitySet="contratos">
+                <ScalarProperty Name="Id_Contrato" ColumnName="Id_Contrato" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Jardin" ColumnName="Jardin" />
+                <ScalarProperty Name="FechaEv" ColumnName="FechaEv" />
+                <ScalarProperty Name="FechaEm" ColumnName="FechaEm" />
+                <ScalarProperty Name="Servicios" ColumnName="Servicios" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="evento">
+            <EntityTypeMapping TypeName="evento_wtcModel.evento">
+              <MappingFragment StoreEntitySet="evento">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="jardin">
+            <EntityTypeMapping TypeName="evento_wtcModel.jardin">
+              <MappingFragment StoreEntitySet="jardin">
+                <ScalarProperty Name="Id_Jardin" ColumnName="Id_Jardin" />
+                <ScalarProperty Name="NomEnc" ColumnName="NomEnc" />
+                <ScalarProperty Name="NomJar" ColumnName="NomJar" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="servicios">
+            <EntityTypeMapping TypeName="evento_wtcModel.servicios">
+              <MappingFragment StoreEntitySet="servicios">
+                <ScalarProperty Name="Id_servicio" ColumnName="Id_servicio" />
+                <ScalarProperty Name="Servicio" ColumnName="Servicio" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Propiedades" ColumnName="Propiedades" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="evento_wtcModel.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

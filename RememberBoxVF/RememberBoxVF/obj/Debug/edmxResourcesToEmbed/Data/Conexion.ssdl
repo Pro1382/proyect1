@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="evento_wtcModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="clientesexpo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreNovio" Type="varchar" MaxLength="100" />
+    <Property Name="NombreNovia" Type="varchar" MaxLength="100" />
+    <Property Name="Correo" Type="varchar" MaxLength="45" />
+    <Property Name="FechaBoda" Type="date" />
+    <Property Name="telefono1" Type="varchar" MaxLength="25" />
+    <Property Name="cabina" Type="int" />
+    <Property Name="alfombra" Type="int" />
+    <Property Name="espejo" Type="int" />
+    <Property Name="tipies" Type="int" />
+    <Property Name="letras" Type="int" />
+    <Property Name="fotos" Type="int" />
+    <Property Name="precio_cabina" Type="double" />
+    <Property Name="precio_alfombra" Type="double" />
+    <Property Name="precio_espejo" Type="double" />
+    <Property Name="precio_tipies" Type="double" />
+    <Property Name="precio_letras" Type="double" />
+    <Property Name="precio_fotos" Type="double" />
+    <Property Name="observacion" Type="varchar" MaxLength="500" />
+    <Property Name="evento" Type="varchar" MaxLength="200" />
+    <Property Name="idEvento" Type="int" />
+  </EntityType>
+  <EntityType Name="contratos">
+    <Key>
+      <PropertyRef Name="Id_Contrato" />
+    </Key>
+    <Property Name="Id_Contrato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Jardin" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="FechaEv" Type="date" />
+    <Property Name="Servicios" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Precio" Type="int" Nullable="false" />
+    <Property Name="FormaPago" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="FechaEm" Type="date" />
+  </EntityType>
+  <EntityType Name="evento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="fecha" Type="date" />
+    <Property Name="estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="jardin">
+    <Key>
+      <PropertyRef Name="Id_Jardin" />
+    </Key>
+    <Property Name="Id_Jardin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomEnc" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="NomJar" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="servicios">
+    <Key>
+      <PropertyRef Name="Id_servicio" />
+    </Key>
+    <Property Name="Id_servicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Servicio" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Precio" Type="int" Nullable="false" />
+    <Property Name="Propiedades" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="evento_wtcModelStoreContainer">
+    <EntitySet Name="clientesexpo" EntityType="Self.clientesexpo" Schema="evento_wtc" store:Type="Tables" />
+    <EntitySet Name="contratos" EntityType="Self.contratos" Schema="evento_wtc" store:Type="Tables" />
+    <EntitySet Name="evento" EntityType="Self.evento" Schema="evento_wtc" store:Type="Tables" />
+    <EntitySet Name="jardin" EntityType="Self.jardin" Schema="evento_wtc" store:Type="Tables" />
+    <EntitySet Name="servicios" EntityType="Self.servicios" Schema="evento_wtc" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="evento_wtc" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

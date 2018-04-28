@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="evento_wtcModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="clientesexpo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreNovio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NombreNovia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FechaBoda" Type="DateTime" />
+    <Property Name="telefono1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="cabina" Type="Int32" />
+    <Property Name="alfombra" Type="Int32" />
+    <Property Name="espejo" Type="Int32" />
+    <Property Name="tipies" Type="Int32" />
+    <Property Name="letras" Type="Int32" />
+    <Property Name="fotos" Type="Int32" />
+    <Property Name="precio_cabina" Type="Double" />
+    <Property Name="precio_alfombra" Type="Double" />
+    <Property Name="precio_espejo" Type="Double" />
+    <Property Name="precio_tipies" Type="Double" />
+    <Property Name="precio_letras" Type="Double" />
+    <Property Name="precio_fotos" Type="Double" />
+    <Property Name="observacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="evento" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="idEvento" Type="Int32" />
+  </EntityType>
+  <EntityType Name="contratos">
+    <Key>
+      <PropertyRef Name="Id_Contrato" />
+    </Key>
+    <Property Name="Id_Contrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Jardin" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaEv" Type="DateTime" />
+    <Property Name="FechaEm" Type="DateTime" />
+    <Property Name="Servicios" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Precio" Type="Int32" Nullable="false" />
+    <Property Name="FormaPago" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="evento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" />
+    <Property Name="estado" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="jardin">
+    <Key>
+      <PropertyRef Name="Id_Jardin" />
+    </Key>
+    <Property Name="Id_Jardin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomEnc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NomJar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="servicios">
+    <Key>
+      <PropertyRef Name="Id_servicio" />
+    </Key>
+    <Property Name="Id_servicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Servicio" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Precio" Type="Int32" Nullable="false" />
+    <Property Name="Propiedades" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="evento_wtcEntities10" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="clientesexpo" EntityType="Self.clientesexpo" />
+    <EntitySet Name="contratos" EntityType="Self.contratos" />
+    <EntitySet Name="evento" EntityType="Self.evento" />
+    <EntitySet Name="jardin" EntityType="Self.jardin" />
+    <EntitySet Name="servicios" EntityType="Self.servicios" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+  </EntityContainer>
+</Schema>

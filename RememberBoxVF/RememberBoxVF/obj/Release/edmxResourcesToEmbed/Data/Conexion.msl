@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="evento_wtcModelStoreContainer" CdmEntityContainer="evento_wtcEntities10">
+    <EntitySetMapping Name="clientesexpo">
+      <EntityTypeMapping TypeName="evento_wtcModel.clientesexpo">
+        <MappingFragment StoreEntitySet="clientesexpo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NombreNovio" ColumnName="NombreNovio" />
+          <ScalarProperty Name="NombreNovia" ColumnName="NombreNovia" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="FechaBoda" ColumnName="FechaBoda" />
+          <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+          <ScalarProperty Name="cabina" ColumnName="cabina" />
+          <ScalarProperty Name="alfombra" ColumnName="alfombra" />
+          <ScalarProperty Name="espejo" ColumnName="espejo" />
+          <ScalarProperty Name="tipies" ColumnName="tipies" />
+          <ScalarProperty Name="letras" ColumnName="letras" />
+          <ScalarProperty Name="fotos" ColumnName="fotos" />
+          <ScalarProperty Name="precio_cabina" ColumnName="precio_cabina" />
+          <ScalarProperty Name="precio_alfombra" ColumnName="precio_alfombra" />
+          <ScalarProperty Name="precio_espejo" ColumnName="precio_espejo" />
+          <ScalarProperty Name="precio_tipies" ColumnName="precio_tipies" />
+          <ScalarProperty Name="precio_letras" ColumnName="precio_letras" />
+          <ScalarProperty Name="precio_fotos" ColumnName="precio_fotos" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="evento" ColumnName="evento" />
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contratos">
+      <EntityTypeMapping TypeName="evento_wtcModel.contratos">
+        <MappingFragment StoreEntitySet="contratos">
+          <ScalarProperty Name="Id_Contrato" ColumnName="Id_Contrato" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Jardin" ColumnName="Jardin" />
+          <ScalarProperty Name="FechaEv" ColumnName="FechaEv" />
+          <ScalarProperty Name="FechaEm" ColumnName="FechaEm" />
+          <ScalarProperty Name="Servicios" ColumnName="Servicios" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evento">
+      <EntityTypeMapping TypeName="evento_wtcModel.evento">
+        <MappingFragment StoreEntitySet="evento">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jardin">
+      <EntityTypeMapping TypeName="evento_wtcModel.jardin">
+        <MappingFragment StoreEntitySet="jardin">
+          <ScalarProperty Name="Id_Jardin" ColumnName="Id_Jardin" />
+          <ScalarProperty Name="NomEnc" ColumnName="NomEnc" />
+          <ScalarProperty Name="NomJar" ColumnName="NomJar" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicios">
+      <EntityTypeMapping TypeName="evento_wtcModel.servicios">
+        <MappingFragment StoreEntitySet="servicios">
+          <ScalarProperty Name="Id_servicio" ColumnName="Id_servicio" />
+          <ScalarProperty Name="Servicio" ColumnName="Servicio" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Propiedades" ColumnName="Propiedades" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="evento_wtcModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

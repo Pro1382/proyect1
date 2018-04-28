@@ -1,0 +1,48 @@
+﻿@{
+    Layout =null;
+}
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/css/Estilos.css" rel="stylesheet" type="text/css" />
+<body>
+    @{Html.RenderPartial("HeaderAdministrador", "Home"); }
+    <div class="w3-container">
+       
+
+        <button id="btn1" onclick="document.getElementById('id01').style.display='block'" class="btn btn-sm btn-success">Login</button>
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:300px">
+
+                <div class="w3-center">
+                    <br>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+                    <img src="~/images/remembeeer.png" alt="Avatar" style="width:30%" class="w3-round w3-margin-top">
+                </div>
+
+                <form class="w3-container" >
+                    <div class="form-group">
+                        <label><b>Usuario:</b></label>
+                        <input class="form-control" type="text" placeholder="Ingresa el usuario" name="usrname" required>
+                        <label><b>Contraseña</b></label>
+                        <input class="form-control" type="password" placeholder="Ingresa la Contraseña" name="psw" required>
+                        <button id="btn2" class="btn btn-sm btn-success btn-block" type="submit">Acceder<span class="glyphicon glyphicon-log-in"></span></button>
+                        <!--<input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me-->
+                    </div>
+                </form>
+}
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button onclick="document.getElementById('id01').style.display='none'" type="button" class="btn btn-sm btn-danger">Cancelar</button>
+                   <!-- <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+
+    <link rel="stylesheet" href="~/css/Calendario.css">
+
+        <div class="content">
+            <div class="calendar-container">
+                <div class="calendar">
+                    <div class="year-header">
+                        <span class="left-button" id="prev"> &lang; </span>
+                        <span class="year" id="label"></span>
+                        <span class="right-button" id="next"> &rang; </span>
+                    </div>
+                    <table class="months-table">
+                        <tbody>
+                            <tr class="months-row">
+                                <td class="month">Ene</td>
+                                <td class="month">Feb</td>
+                                <td class="month">Mar</td>
+                                <td class="month">Abr</td>
+                                <td class="month">May</td>
+                                <td class="month">Jun</td>
+                                <td class="month">Jul</td>
+                                <td class="month">Ago</td>
+                                <td class="month">Sep</td>
+                                <td class="month">Oct</td>
+                                <td class="month">Nov</td>
+                                <td class="month">Dic</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="days-table">
+                        <td class="day">Dom</td>
+                        <td class="day">Lun</td>
+                        <td class="day">Mar</td>
+                        <td class="day">Mie</td>
+                        <td class="day">Jue</td>
+                        <td class="day">Vie</td>
+                        <td class="day">Sab</td>
+                    </table>
+                    <div class="frame">
+                        <table class="dates-table">
+                            <tbody class="tbody"></tbody>
+                        </table>
+                    </div>
+                    <button class="button" id="add-button">Agregar Evento</button>
+                </div>
+            </div>
+            <div class="events-container">
+            </div>
+            <div class="dialog" id="dialog">
+                <h2 class="dialog-header"> Agregar Nuevo Evento </h2>
+                <form class="form" id="form">
+                    <div class="form-container" align="center">
+                        <label class="form-label" id="valueFromMyButton" for="name">Nombre del evento</label>
+                        <input class="input" type="text" id="name" maxlength="60">
+                        <label class="form-label" id="valueFromMyButton" for="count">Numero de cliente</label>
+                        <input class="input" type="number" id="count" min="0" max="1000000" maxlength="12">
+                        <input type="button" value="Cancelar" class="button" id="cancel-button">
+                        <input type="button" value="Guardar" class="button" id="ok-button">
+                      
+                    </div>
+                </form>
+            </div>
+        </div>
+<!-- Dialog Box-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+</script>
+
+
+
+
+
+
+
+
+

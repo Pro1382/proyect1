@@ -1,0 +1,2531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Activities</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Activities.AddToDictionary`2">
+      <summary>Una actividad para agregar una clave y un valor a un diccionario.</summary>
+      <typeparam name="TKey">Tipo de la clave.</typeparam>
+      <typeparam name="TValue">Tipo del valor.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.AddToDictionary`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.AddToDictionary`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.AddToDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0},System.Activities.InArgument{`1})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.AddToDictionary`2" />.</summary>
+      <param name="dictionary">Diccionario de destino.</param>
+      <param name="key">Clave que se va a agregar.</param>
+      <param name="value">Valor que se va a agregar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.AddToDictionary`2.Dictionary">
+      <summary>Obtiene o establece el diccionario de destino.</summary>
+      <returns>Devuelve el diccionario de destino.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.AddToDictionary`2.Key">
+      <summary>Obtiene o establece la clave que se va a agregar.</summary>
+      <returns>Devuelve la clave que se va a agregar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.AddToDictionary`2.Value">
+      <summary>Obtiene o establece el valor que se va a agregar.</summary>
+      <returns>Devuelve el valor que se va a agregar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.BuildCollection`1">
+      <summary>Una actividad para generar una colección.</summary>
+      <typeparam name="TValue">Tipo de un elemento de la colección.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.BuildCollection`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.BuildCollection`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.BuildCollection`1.#ctor(System.Activities.InArgument{System.Collections.Generic.IEnumerable{`0}})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.BuildCollection`1" />.</summary>
+      <param name="collection">Colección de origen.</param>
+    </member>
+    <member name="P:Microsoft.Activities.BuildCollection`1.Collection">
+      <summary>Obtiene o establece la colección de origen.</summary>
+      <returns>Devuelve la colección de origen.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.BuildCollection`1.Values">
+      <summary>Obtiene el conjunto de valores que se va a agregar a la colección.</summary>
+      <returns>Devuelve el conjunto de valores que se va a agregar a la colección.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.BuildDictionary`2">
+      <summary>Una actividad para compilar un diccionario.</summary>
+      <typeparam name="TKey">Tipo de la clave.</typeparam>
+      <typeparam name="TValue">Tipo del valor.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.BuildDictionary`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.BuildDictionary`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.BuildDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.BuildDictionary`2" />.</summary>
+      <param name="dictionary">Diccionario de origen.</param>
+    </member>
+    <member name="P:Microsoft.Activities.BuildDictionary`2.Dictionary">
+      <summary>Obtiene o establece el diccionario de origen.</summary>
+      <returns>Devuelve el diccionario de origen.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.BuildDictionary`2.Values">
+      <summary>Obtiene el diccionario de claves y valores que se va a agregar.</summary>
+      <returns>Devuelve el diccionario de claves y valores que se va a agregar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.BuildDynamicValue">
+      <summary>Una actividad para generar un DynamicValue.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.BuildDynamicValue.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.BuildDynamicValue" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.BuildDynamicValue.Properties">
+      <summary>Obtiene o establece el diccionario del nombre y de los valores de la propiedad que se van a agregar al DynamicValue.</summary>
+      <returns>Devuelve el diccionario del nombre y de los valores de la propiedad.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.BuildDynamicValue.Result">
+      <summary>Obtiene o establece el DynamicValue resultante.</summary>
+      <returns>Devuelve el DynamicValue que se compila.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ClearDictionary`2">
+      <summary>Una actividad para borrar un diccionario.</summary>
+      <typeparam name="TKey">Tipo de la clave.</typeparam>
+      <typeparam name="TValue">Tipo del valor.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.ClearDictionary`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ClearDictionary`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ClearDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ClearDictionary`2" />.</summary>
+      <param name="dictionary">Diccionario de destino.</param>
+    </member>
+    <member name="P:Microsoft.Activities.ClearDictionary`2.Dictionary">
+      <summary>Obtiene o establece el diccionario de destino.</summary>
+      <returns>Devuelve el diccionario de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ContainsDynamicValueProperty">
+      <summary>Una actividad para comprobar si un DynamicValue contiene un elemento particular.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ContainsDynamicValueProperty.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ContainsDynamicValueProperty" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ContainsDynamicValueProperty.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ContainsDynamicValueProperty" />.</summary>
+      <param name="source">DynamicValue de origen.</param>
+      <param name="propertyName">Nombre de la propiedad que se va a buscar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.ContainsDynamicValueProperty.PropertyName">
+      <summary>Obtiene o establece el nombre de la propiedad que se va a buscar.</summary>
+      <returns>Devuelve el nombre de la propiedad de destino.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ContainsDynamicValueProperty.Source">
+      <summary>Obtiene o establece el DynamicValue de origen.</summary>
+      <returns>Devuelve el DynamicValue de origen.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CopyDynamicValue">
+      <summary>Una actividad para copiar un DynamicValue.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CopyDynamicValue.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CopyDynamicValue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CopyDynamicValue.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue},System.Activities.OutArgument{Microsoft.Activities.DynamicValue})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CopyDynamicValue" />.</summary>
+      <param name="source">DynamicValue de origen.</param>
+      <param name="result">El DynamicValue de destino.</param>
+    </member>
+    <member name="P:Microsoft.Activities.CopyDynamicValue.PropertyMapping">
+      <summary>Obtiene un diccionario que asigna nombres de propiedades del DynamicValue de origen a nombres de elementos del DynamicValue de destino.</summary>
+      <returns>Devuelve el diccionario de asignación de propiedades.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CopyDynamicValue.Source">
+      <summary>Obtiene o establece el DynamicValue de origen.</summary>
+      <returns>Devuelve el DynamicValue de origen.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CountCollection`1">
+      <summary>Una actividad para contar el número de elementos de una colección.</summary>
+      <typeparam name="T">Tipo de los elementos de la colección.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.CountCollection`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CountCollection`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CountCollection`1.#ctor(System.Activities.InArgument{System.Collections.Generic.ICollection{`0}})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CountCollection`1" />.</summary>
+      <param name="collection">Colección de destino.</param>
+    </member>
+    <member name="P:Microsoft.Activities.CountCollection`1.Collection">
+      <summary>Obtiene o establece la colección de destino.</summary>
+      <returns>Devuelve la colección de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CountDictionary`2">
+      <summary>Una actividad para contar el número de elementos de un diccionario.</summary>
+      <typeparam name="TKey">Tipo de la clave.</typeparam>
+      <typeparam name="TValue">Tipo del valor.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.CountDictionary`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CountDictionary`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CountDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CountDictionary`2" />.</summary>
+      <param name="dictionary">Diccionario de destino.</param>
+    </member>
+    <member name="P:Microsoft.Activities.CountDictionary`2.Dictionary">
+      <summary>Obtiene o establece el diccionario de destino.</summary>
+      <returns>Devuelve el diccionario de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CountDynamicValueItems">
+      <summary>Una actividad para contar el número de elementos secundarios de un DynamicValue.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CountDynamicValueItems.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CountDynamicValueItems" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CountDynamicValueItems.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CountDynamicValueItems" />.</summary>
+      <param name="source">DynamicValue de origen.</param>
+    </member>
+    <member name="P:Microsoft.Activities.CountDynamicValueItems.Source">
+      <summary>Obtiene o establece el DynamicValue de origen.</summary>
+      <returns>Devuelve el DynamicValue.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateDynamicValue">
+      <summary>Una actividad para crear un DynamicValue.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateDynamicValue.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateDynamicValue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateDynamicValue.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateDynamicValue" />.</summary>
+      <param name="propertyName">Nombre de la propiedad que se va a agregar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.CreateDynamicValue.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateDynamicValue" />.</summary>
+      <param name="propertyName">Nombre de la propiedad que se va a agregar.</param>
+      <param name="propertyValue">Valor de la propiedad que se va a agregar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValue.PropertyName">
+      <summary>Obtiene o establece el nombre de la propiedad que se va a agregar.</summary>
+      <returns>Devuelve el nombre de la propiedad.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValue.PropertyValue">
+      <summary>Obtiene o establece el valor de la propiedad que se va a agregar.</summary>
+      <returns>Devuelve el valor de la propiedad.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateDynamicValueFromMessage">
+      <summary>Representa una actividad para crear <see cref="T:Microsoft.Activities.DynamicValue" /> desde un mensaje.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateDynamicValueFromMessage.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateDynamicValueFromMessage" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValueFromMessage.Headers">
+      <summary>Obtiene o establece los encabezados de los mensajes.</summary>
+      <returns>Los encabezados de los mensajes.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValueFromMessage.Value">
+      <summary>Obtiene o establece el valor de la propiedad que se va a crear.</summary>
+      <returns>Valor de la propiedad que se va a crear.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValueFromMessage.Version">
+      <summary>Obtiene o establece la versión del mensaje.</summary>
+      <returns>Versión del mensaje.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateException`1">
+      <summary>Una actividad para crear una excepción.</summary>
+      <typeparam name="T">Tipo de la excepción creada.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.CreateException`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateException`1" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.CreateException`1.InnerException">
+      <summary>Obtiene o establece la excepción interna.</summary>
+      <returns>Devuelve la excepción interna.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateException`1.Message">
+      <summary>Obtiene o establece el mensaje de la excepción.</summary>
+      <returns>Devuelve el mensaje de la excepción.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateException`2">
+      <summary>Una actividad para crear una excepción.</summary>
+      <typeparam name="T">Tipo de la excepción creada.</typeparam>
+      <typeparam name="TResult">Tipo de la excepción devuelta.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.CreateException`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateException`2" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.CreateException`2.InnerException">
+      <summary>Obtiene o establece la excepción interna.</summary>
+      <returns>Devuelve la excepción interna.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateException`2.Message">
+      <summary>Obtiene o establece el mensaje de la excepción.</summary>
+      <returns>Devuelve el mensaje de la excepción.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateMessageFromDynamicValue">
+      <summary>Representa una actividad para crear un mensaje desde <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateMessageFromDynamicValue.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateMessageFromDynamicValue" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.CreateMessageFromDynamicValue.Action">
+      <summary>Obtiene o establece la acción de cómo debería procesarse el mensaje.</summary>
+      <returns>La acción de cómo debería procesarse el mensaje.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateMessageFromDynamicValue.Body">
+      <summary>Obtiene o establece el cuerpo del mensaje.</summary>
+      <returns>Cuerpo del mensaje.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateMessageFromDynamicValue.Headers">
+      <summary>Obtiene o establece los encabezados de los mensajes.</summary>
+      <returns>Los encabezados de los mensajes.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateMessageFromDynamicValue.Version">
+      <summary>Obtiene o establece la versión del mensaje.</summary>
+      <returns>Versión del mensaje.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateUriFromDynamicValue">
+      <summary>Una actividad para crear un URI de un DynamicValue de entrada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateUriFromDynamicValue.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateUriFromDynamicValue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateUriFromDynamicValue.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.CreateUriFromDynamicValue" />.</summary>
+      <param name="options">Un DynamicValue que contiene elementos de un URI como el esquema, el host, el puerto, la ruta de acceso, la consulta y el fragmento.</param>
+    </member>
+    <member name="P:Microsoft.Activities.CreateUriFromDynamicValue.Options">
+      <summary>Obtiene o establece un DynamicValue que contiene elementos de un URI como el esquema, el host, el puerto, la ruta de acceso, la consulta y el fragmento.</summary>
+      <returns>Devuelve el DynamicValue configurado.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.DictionaryContains`2">
+      <summary>Una actividad para comprobar si un diccionario contiene un elemento particular.</summary>
+      <typeparam name="TKey">Tipo de clave.</typeparam>
+      <typeparam name="TValue">Tipo de valor.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.DictionaryContains`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.DictionaryContains`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DictionaryContains`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.DictionaryContains`2" />.</summary>
+      <param name="dictionary">Diccionario que se va a buscar.</param>
+      <param name="key">Clave que se va a buscar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DictionaryContains`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0},System.Activities.InArgument{`1})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.DictionaryContains`2" />.</summary>
+      <param name="dictionary">Diccionario que se va a buscar.</param>
+      <param name="key">Clave que se va a buscar.</param>
+      <param name="value">Valor que se va a hacer coincidir.</param>
+    </member>
+    <member name="P:Microsoft.Activities.DictionaryContains`2.Dictionary">
+      <summary>Obtiene o establece el diccionario que se va a buscar.</summary>
+      <returns>Devuelve el diccionario.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DictionaryContains`2.Key">
+      <summary>Obtiene o establece la clave que se va a buscar.</summary>
+      <returns>Devuelve la clave de destino.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DictionaryContains`2.Value">
+      <summary>Obtiene o establece el valor que se va a hacer coincidir.</summary>
+      <returns>Devuelve el valor de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.DynamicForEach`1">
+      <summary>Una actividad para ejecutar actividades sobre una colección con ramas de ejecución dinámicas.</summary>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicForEach`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicForEach`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicForEach`1.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{System.String,`0}})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicForEach`1" />.</summary>
+      <param name="values">Colección de valores sobre los que se va a iterar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicForEach`1.Body">
+      <summary>Devuelve o establece el conjunto de actividades que se va a ejecutar.</summary>
+      <returns>Devuelve el conjunto de actividades configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicForEach`1.BodyCompleted">
+      <summary>Devuelve o establece la acción de la actividad que se va a ejecutar cuando se completa una rama.</summary>
+      <returns>Devuelve la acción de la actividad.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicForEach`1.UpdateValues">
+      <summary>Obtiene o establece la acción de la actividad para actualizar valores.</summary>
+      <returns>Devuelve la acción de la actividad.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicForEach`1.Values">
+      <summary>Obtiene o establece la colección de valores sobre los que se va iterar.</summary>
+      <returns>Devuelve la colección de valores.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.DynamicValue">
+      <summary>Representa una estructura de datos dinámicos para admitir conjuntos anidados de pares clave-valor de un flujo de trabajo. </summary>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicValue" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.Boolean)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicValue" /> con un valor booleano.</summary>
+      <param name="value">Valor que se va a agregar al <see cref="T:Microsoft.Activities.DynamicValue" />.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.DateTime)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicValue" /> con un valor DateTime.</summary>
+      <param name="value">Valor que se va a agregar al <see cref="T:Microsoft.Activities.DynamicValue" />.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.Double)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicValue" /> con un valor doble.</summary>
+      <param name="value">Valor que se va a agregar al <see cref="T:Microsoft.Activities.DynamicValue" />.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.Guid)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicValue" /> con un valor GUID.</summary>
+      <param name="value">Valor que se va a agregar al <see cref="T:Microsoft.Activities.DynamicValue" />.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.Int32)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicValue" /> con un valor Int32.</summary>
+      <param name="value">Valor que se va a agregar al <see cref="T:Microsoft.Activities.DynamicValue" />.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.String)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.DynamicValue" /> con un valor de cadena.</summary>
+      <param name="value">Valor que se va a agregar al <see cref="T:Microsoft.Activities.DynamicValue" />.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Add(Microsoft.Activities.DynamicValue)">
+      <summary>Agrega un <see cref="T:Microsoft.Activities.DynamicValue" /> como elemento secundario.</summary>
+      <param name="item">
+        <see cref="T:Microsoft.Activities.DynamicValue" /> que se va a agregar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Clear">
+      <summary>Elimina el <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Contains(Microsoft.Activities.DynamicValue)">
+      <summary>Determina si el <see cref="T:Microsoft.Activities.DynamicValue" /> contiene un elemento de destino.</summary>
+      <returns>true si el <see cref="T:Microsoft.Activities.DynamicValue" /> contiene un elemento de destino; en caso contrario, false.</returns>
+      <param name="item">El elemento secundario para buscar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.CopyTo(Microsoft.Activities.DynamicValue[],System.Int32)">
+      <summary>Copia el <see cref="T:Microsoft.Activities.DynamicValue" /> en una matriz.</summary>
+      <param name="array">La matriz que contendrá la copia del <see cref="T:Microsoft.Activities.DynamicValue" />.</param>
+      <param name="arrayIndex">El índice de la matriz en el que comienza la copia.</param>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicValue.Count">
+      <summary>Obtiene el número de elementos secundarios en el <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>El número de elementos secundarios en el <see cref="T:Microsoft.Activities.DynamicValue" />.</returns>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.GetEnumerator">
+      <summary>Obtiene un enumerador que recorre en iteración el <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Enumerador que se puede usar para recorrer en iteración el <see cref="T:Microsoft.Activities.DynamicValue" />.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicValue.IsReadOnly">
+      <summary>Obtiene un valor que indica si el <see cref="T:Microsoft.Activities.DynamicValue" /> es de solo lectura.</summary>
+      <returns>true si el <see cref="T:Microsoft.Activities.DynamicValue" /> es de solo lectura; en caso contrario, false.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicValue.Item(System.Int32)">
+      <summary>Obtiene o establece un elemento por Id.</summary>
+      <returns>El elemento con el Id. especificado.</returns>
+      <param name="key">El Id. del elemento.</param>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicValue.Item(System.String)">
+      <summary>Obtiene o establece un elemento por nombre.</summary>
+      <returns>El elemento con el nombre especificado.</returns>
+      <param name="key">Nombre del elemento.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.Boolean)~Microsoft.Activities.DynamicValue">
+      <summary>Convierte un valor booleano a un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Una representación de <see cref="T:Microsoft.Activities.DynamicValue" /> del valor booleano especificado.</returns>
+      <param name="value">Un valor booleano.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.DateTime)~Microsoft.Activities.DynamicValue">
+      <summary>Convierte un valor DateTime a un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Una representación de <see cref="T:Microsoft.Activities.DynamicValue" /> del valor DateTime especificado.</returns>
+      <param name="value">Un valor DateTime.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.Double)~Microsoft.Activities.DynamicValue">
+      <summary>Convierte un valor doble a un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Una representación de <see cref="T:Microsoft.Activities.DynamicValue" /> del valor doble especificado.</returns>
+      <param name="value">Un valor doble.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.Guid)~Microsoft.Activities.DynamicValue">
+      <summary>Convierte un valor GUID a un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Una representación de <see cref="T:Microsoft.Activities.DynamicValue" /> del valor GUID especificado.</returns>
+      <param name="value">Un valor GUID.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.Int32)~Microsoft.Activities.DynamicValue">
+      <summary>Convierte un valor Int32 a un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Una representación de <see cref="T:Microsoft.Activities.DynamicValue" /> del valor Int32 especificado.</returns>
+      <param name="value">Un valor Int32.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.String)~Microsoft.Activities.DynamicValue">
+      <summary>Convierte un valor de cadena a un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Una representación de <see cref="T:Microsoft.Activities.DynamicValue" /> del valor de cadena especificado.</returns>
+      <param name="value">Un valor de cadena.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Parse(System.String)">
+      <summary>Analiza la cadena en un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>El <see cref="T:Microsoft.Activities.DynamicValue" /> de la cadena especificada.</returns>
+      <param name="encodedValue">Valor codificado del <see cref="T:Microsoft.Activities.DynamicValue" />.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Remove(Microsoft.Activities.DynamicValue)">
+      <summary>Quita un elemento de un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>true si la operación es correcta; en caso contrario, false.</returns>
+      <param name="item">Elemento que se va a quitar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.System#Collections#IEnumerable#GetEnumerator">
+      <summary>Obtiene un enumerador que recorre en iteración el <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Enumerador que se puede usar para recorrer en iteración el <see cref="T:Microsoft.Activities.DynamicValue" />.</returns>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.ToString">
+      <summary>Devuelve una representación de cadena del <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+      <returns>Una representación de cadena del <see cref="T:Microsoft.Activities.DynamicValue" />.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ExternalVariable">
+      <summary>Una variable de flujo de trabajo usada para el modelado del estado global que se puede consultar externamente incluso cuando la instancia se conserva. </summary>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.Default">
+      <summary>Obtiene o establece el valor predeterminado para usar si no se ha definido la variable externa.</summary>
+      <returns>Devuelve el valor predeterminado para usar si no se ha definido la variable externa.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.DefaultCore">
+      <summary>Obtiene o establece el objeto de valor predeterminado.</summary>
+      <returns>Devuelve el objeto de valor predeterminado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.Modifiers">
+      <summary>Obtiene o establece los modificadores de variable.</summary>
+      <returns>Devuelve los modificadores de variable configurados.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.Name">
+      <summary>Obtiene o establece el nombre de la variable externa.</summary>
+      <returns>Devuelve el nombre de la variable externa.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.Type">
+      <summary>Obtiene el tipo de variable externa.</summary>
+      <returns>Devuelve el tipo de variable externa.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ExternalVariable`1">
+      <summary>Una variable de flujo de trabajo usada para el modelado del estado global que se puede consultar externamente incluso cuando la instancia se conserva. </summary>
+      <typeparam name="T">Tipo de variable externa.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariable`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ExternalVariable`1" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable`1.Default">
+      <summary>Obtiene o establece el valor predeterminado para usar si no se ha definido la variable externa.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable`1.Type">
+      <summary>Obtiene el tipo de variable externa.</summary>
+      <returns>Devuelve el tipo de variable externa.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ExternalVariableReference`1">
+      <summary>Una actividad para recuperar la referencia de ubicación de la variable externa para el uso en el valor L de una expresión.</summary>
+      <typeparam name="T">Tipo de variable externa.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariableReference`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ExternalVariableReference`1" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariableReference`1.Name">
+      <summary>Obtiene o establece el nombre de la variable externa que se va a referenciar.</summary>
+      <returns>Devuelve la referencia de ubicación de la variable externa.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ExternalVariableValue`1">
+      <summary>Una actividad para recuperar el valor de una variable externa.</summary>
+      <typeparam name="T">Tipo de variable externa.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariableValue`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ExternalVariableValue`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariableValue`1.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ExternalVariableValue`1" />.</summary>
+      <param name="name">Nombre de la variable externa que se va a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariableValue`1.#ctor(System.String,System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.ExternalVariableValue`1" />.</summary>
+      <param name="name">Nombre de la variable externa que se va a recuperar.</param>
+      <param name="defaultValue">Valor predeterminado que se devolverá si la variable externa no se ha establecido.</param>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariableValue`1.Default">
+      <summary>Obtiene o establece el valor predeterminado que se devolverá si no se ha establecido la variable externa.</summary>
+      <returns>Devuelve el valor predeterminado configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariableValue`1.Name">
+      <summary>Obtiene o establece el nombre de la variable externa que se va a recuperar.</summary>
+      <returns>Devuelve el nombre de la variable externa que se va a recuperar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.FromUriTemplate">
+      <summary>Una actividad para crear un URI de UriTemplate.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.FromUriTemplate.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.FromUriTemplate" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.FromUriTemplate.BaseAddress">
+      <summary>Obtiene o establece la dirección base.</summary>
+      <returns>Devuelve la dirección base.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.FromUriTemplate.Parameters">
+      <summary>Obtiene o establece los parámetros denominados y sus valores.</summary>
+      <returns>Devuelve el conjunto de parámetros.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.FromUriTemplate.Template">
+      <summary>Obtiene o establece la UriTemplate usada para aplicar formato.</summary>
+      <returns>Devuelve la UriTemplate.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetConfigurationValue">
+      <summary>Una actividad para recuperar un valor de la configuración de flujo de trabajo.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetConfigurationValue.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetConfigurationValue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetConfigurationValue.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetConfigurationValue" />.</summary>
+      <param name="name">Nombre del parámetro de configuración que se va a recuperar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.GetConfigurationValue.DefaultValue">
+      <summary>Obtiene o establece el valor predeterminado que se recuperará si no se encuentra ningún valor de configuración.</summary>
+      <returns>Devuelve el valor predeterminado configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetConfigurationValue.Name">
+      <summary>Obtiene o establece el nombre del parámetro de configuración que se va a recuperar.</summary>
+      <returns>Devuelve el nombre de la entrada de configuración de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetDictionaryValue`2">
+      <summary>Una actividad para recuperar el valor de una entrada de diccionario particular.</summary>
+      <typeparam name="TKey">Tipo de la clave.</typeparam>
+      <typeparam name="TValue">Tipo del valor.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.GetDictionaryValue`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetDictionaryValue`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetDictionaryValue`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetDictionaryValue`2" />.</summary>
+      <param name="dictionary">Diccionario desde el que se va a leer.</param>
+      <param name="key">Clave de la entrada que se va a recuperar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.GetDictionaryValue`2.Dictionary">
+      <summary>Obtiene o establece el diccionario desde el que se va a leer.</summary>
+      <returns>Devuelve el diccionario de origen.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetDictionaryValue`2.Key">
+      <summary>Obtiene o establece la clave de la entrada que se va a recuperar.</summary>
+      <returns>Devuelve la clave de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetDynamicValueProperties">
+      <summary>Una actividad para recuperar varias propiedades de un DynamicValue.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetDynamicValueProperties.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetDynamicValueProperties" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.GetDynamicValueProperties.Properties">
+      <summary>Obtiene o establece el conjunto de nombres de propiedad para recuperar y las ubicaciones donde almacenarlos.</summary>
+      <returns>Devuelve el conjunto de nombres de propiedad y las referencias de ubicación configurados.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetDynamicValueProperties.Source">
+      <summary>Obtiene o establece el DynamicValue desde el que se va a leer.</summary>
+      <returns>Devuelve el DynamicValue de origen.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetDynamicValueProperty`1">
+      <summary>Una actividad para devolver una propiedad de un DynamicValue.</summary>
+      <typeparam name="T">Tipo de propiedad que se va a devolver.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.GetDynamicValueProperty`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetDynamicValueProperty`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetDynamicValueProperty`1.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetDynamicValueProperty`1" />.</summary>
+      <param name="source">El DynamicValue desde el que se va a leer.</param>
+    </member>
+    <member name="M:Microsoft.Activities.GetDynamicValueProperty`1.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetDynamicValueProperty`1" />.</summary>
+      <param name="source">El DynamicValue desde el que se va a leer.</param>
+      <param name="propertyName">Nombre y ruta de la propiedad que se va a recuperar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.GetDynamicValueProperty`1.PropertyName">
+      <summary>Obtiene o establece el nombre y la ruta de la propiedad que se va a recuperar.</summary>
+      <returns>Devuelve el nombre de la propiedad.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetDynamicValueProperty`1.Source">
+      <summary>Obtiene o establece el DynamicValue desde el que se va a leer.</summary>
+      <returns>Devuelve el DynamicValue de origen.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetInstanceAddress">
+      <summary>Una actividad para devolver la dirección de la instancia de flujo de trabajo que se ejecuta.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetInstanceAddress.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetInstanceAddress" />.</summary>
+    </member>
+    <member name="T:Microsoft.Activities.GetItemFromCollection`1">
+      <summary>Una actividad para obtener un elemento de una colección.</summary>
+      <typeparam name="TItem">Tipo del elemento.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.GetItemFromCollection`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetItemFromCollection`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetItemFromCollection`1.#ctor(System.Activities.InArgument{System.Collections.Generic.ICollection{`0}},System.Activities.InArgument{System.Int32})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.GetItemFromCollection`1" />.</summary>
+      <param name="collection">Colección de elementos.</param>
+      <param name="index">Índice del elemento que se va a devolver.</param>
+    </member>
+    <member name="P:Microsoft.Activities.GetItemFromCollection`1.Collection">
+      <summary>Obtiene o establece la colección de elementos.</summary>
+      <returns>Devuelve la colección de elementos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetItemFromCollection`1.Index">
+      <summary>Obtiene o establece el índice del elemento que se va a devolver.</summary>
+      <returns>Devuelve el índice.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.IsEmptyDynamicValue">
+      <summary>Una actividad para determinar si un DynamicValue está vacío.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.IsEmptyDynamicValue.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.IsEmptyDynamicValue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.IsEmptyDynamicValue.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.IsEmptyDynamicValue" />.</summary>
+      <param name="input">DynamicValue de destino.</param>
+    </member>
+    <member name="P:Microsoft.Activities.IsEmptyDynamicValue.Input">
+      <summary>Obtiene o establece el DynamicValue de destino.</summary>
+      <returns>Devuelve el DynamicValue de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ParseDynamicValue">
+      <summary>Representa Una actividad para analizar una cadena JSON en un <see cref="T:Microsoft.Activities.DynamicValue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ParseDynamicValue.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.ParseDynamicValue" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ParseDynamicValue.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.ParseDynamicValue" /> con una cadena JSON.</summary>
+      <param name="json">Cadena JSON para analizar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.ParseDynamicValue.CacheMetadata(System.Activities.CodeActivityMetadata)">
+      <summary>Crea y valida una descripción de los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</summary>
+      <param name="metadata">Metadatos de la actividad que encapsulan los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Activities.ParseDynamicValue.Execute(System.Activities.CodeActivityContext)">
+      <summary>Realiza la ejecución de la actividad.</summary>
+      <returns>El <see cref="T:Microsoft.Activities.DynamicValue" /> de la cadena analizada.</returns>
+      <param name="context">El contexto de ejecución bajo el que la actividad se ejecuta.</param>
+    </member>
+    <member name="P:Microsoft.Activities.ParseDynamicValue.Json">
+      <summary>Obtiene o establece la cadena JSON que se va a analizar.</summary>
+      <returns>Cadena JSON para analizar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.RemoveFromDictionary`2">
+      <summary>Una actividad para quitar un elemento de un diccionario.</summary>
+      <typeparam name="TKey">Tipo de la clave.</typeparam>
+      <typeparam name="TValue">Tipo del valor.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.RemoveFromDictionary`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.RemoveFromDictionary`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.RemoveFromDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.RemoveFromDictionary`2" />.</summary>
+      <param name="dictionary">Diccionario del que se va a quitar el elemento.</param>
+      <param name="key">Clave del elemento que se va a quitar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.RemoveFromDictionary`2.Dictionary">
+      <summary>Obtiene o establece el diccionario del que se va a quitar el elemento.</summary>
+      <returns>Devuelve el diccionario de destino.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.RemoveFromDictionary`2.Key">
+      <summary>Obtiene o establece la clave del elemento que se va a quitar.</summary>
+      <returns>Devuelve la clave que se va a usar para la eliminación.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.SetUserStatus">
+      <summary>Representa una actividad para establecer el valor UserStatus de la instancia.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.SetUserStatus.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.SetUserStatus" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.SetUserStatus.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.SetUserStatus" /> con la descripción de UserStatus.</summary>
+      <param name="description">La descripción para asignar a la variable de UserStatus.</param>
+    </member>
+    <member name="P:Microsoft.Activities.SetUserStatus.Description">
+      <summary>Obtiene o establece la descripción para asignar a la variable de UserStatus.</summary>
+      <returns>La descripción para asignar a la variable de UserStatus.</returns>
+    </member>
+    <member name="F:Microsoft.Activities.SetUserStatus.UserStatusVariable">
+      <summary>Identificador de variable UserStatus completo.</summary>
+    </member>
+    <member name="T:Microsoft.Activities.SplitKeyValuePair`2">
+      <summary>Una actividad para separar la clave y el valor de un KeyValuePair.</summary>
+      <typeparam name="TKey">Tipo de la clave.</typeparam>
+      <typeparam name="TValue">Tipo del valor.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.SplitKeyValuePair`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.SplitKeyValuePair`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.SplitKeyValuePair`2.#ctor(System.Activities.InArgument{System.Collections.Generic.KeyValuePair{`0,`1}})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.SplitKeyValuePair`2" />.</summary>
+      <param name="input">El KeyValuePair que se va a separar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.SplitKeyValuePair`2.Input">
+      <summary>Obtiene o establece el KeyValuePair que se va a separar.</summary>
+      <returns>Devuelve el KeyValuePair que se va a separar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.SplitKeyValuePair`2.Key">
+      <summary>Obtiene o establece la clave del KeyValuePair.</summary>
+      <returns>Devuelve la clave del KeyValuePair.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.SplitKeyValuePair`2.Value">
+      <summary>Obtiene o establece el valor del KeyValuePair.</summary>
+      <returns>Devuelve el valor del KeyValuePair.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.WorkflowInstanceResult">
+      <summary>El resultado de una excepción de instancia de flujo de trabajo.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.WorkflowInstanceResult.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.WorkflowInstanceResult" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.WorkflowInstanceResult.Reason">
+      <summary>Obtiene o establece la razón del estado de ejecución de instancia de flujo de trabajo.</summary>
+      <returns>Devuelve el valor de la razón.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.WorkflowInstanceResult.State">
+      <summary>Obtiene o establece el estado de la instancia de flujo de trabajo.</summary>
+      <returns>Devuelve el estado de la instancia de flujo de trabajo.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.WorkflowInstanceStatus">
+      <summary>Estado de la instancia de flujo de trabajo.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.NotSpecified">
+      <summary>El estado de la instancia no se ha especificado.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.NotStarted">
+      <summary>La instancia no se ha iniciado.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Started">
+      <summary>La instancia se ha iniciado.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Suspended">
+      <summary>La instancia se ha suspendido.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Canceling">
+      <summary>La instancia se está cancelando.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Canceled">
+      <summary>La instancia se ha cancelado.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Terminated">
+      <summary>La instancia ha finalizado.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Completed">
+      <summary>La instancia se ha completado.</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Add`1">
+      <summary>Una actividad para agregar dos números.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Add`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Add`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Add`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Add`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Add`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Add`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.AddToDate">
+      <summary>Una actividad para agregar un valor DateTime o TimeSpan de entrada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.AddToDate.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.AddToDate" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Days">
+      <summary>Obtiene o establece el valor de los días.</summary>
+      <returns>Devuelve el valor de los días.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Hours">
+      <summary>Obtiene o establece el valor de las horas.</summary>
+      <returns>Devuelve el valor de las horas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Input">
+      <summary>Obtiene o establece el valor DateTime de entrada.</summary>
+      <returns>Devuelve el valor DateTime de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Milliseconds">
+      <summary>Obtiene o establece el valor de los milisegundos.</summary>
+      <returns>Devuelve el valor de los milisegundos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Minutes">
+      <summary>Obtiene o establece el valor de los minutos.</summary>
+      <returns>Devuelve el valor de los minutos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Months">
+      <summary>Obtiene o establece el valor de los meses.</summary>
+      <returns>Devuelve el valor de los meses.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Seconds">
+      <summary>Obtiene o establece el valor de los segundos.</summary>
+      <returns>Devuelve el valor de los segundos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.TimeSpan">
+      <summary>Obtiene o establece el valor TimeSpan de entrada.</summary>
+      <returns>Devuelve el valor TimeSpan de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.And">
+      <summary>Una actividad para ejecutar una operación AND binaria.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.And.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.And" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.And.#ctor(System.Activities.InArgument{System.Boolean},System.Activities.InArgument{System.Boolean})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.And" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.And.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.And.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CompareDate">
+      <summary>Una actividad para comparar dos valores de DateTimes.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CompareDate.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CompareDate" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CompareDate.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CompareDate" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareDate.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareDate.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CompareString">
+      <summary>Una actividad para comparar dos cadenas.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CompareString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CompareString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CompareString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CompareString" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareString.IgnoreCase">
+      <summary>Obtiene o establece si se tienen en cuenta las mayúsculas y minúsculas.</summary>
+      <returns>Devuelve si se tienen en cuenta las mayúsculas y minúsculas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareString.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareString.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ConcatString">
+      <summary>Una actividad para concatenar cadenas.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ConcatString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ConcatString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ConcatString.#ctor(System.Activities.InArgument{System.String}[])">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ConcatString" />.</summary>
+      <param name="inputs">Entradas que se van a concatenar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ConcatString.Inputs">
+      <summary>Obtiene o establece las entradas que se van a concatenar.</summary>
+      <returns>Devuelve las entradas que se van a concatenar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ContainsString">
+      <summary>Una actividad para comprobar si una cadena de entrada contiene un valor de destino.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ContainsString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ContainsString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ContainsString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ContainsString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="searchValue">Valor de destino.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ContainsString.CacheMetadata(System.Activities.CodeActivityMetadata)">
+      <summary>Crea y valida una descripción de los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</summary>
+      <param name="metadata">Metadatos de la actividad que encapsulan los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ContainsString.Execute(System.Activities.CodeActivityContext)">
+      <summary>Realiza la ejecución de la actividad.</summary>
+      <returns>Devuelve si la cadena de entrada contiene o no el valor de destino.</returns>
+      <param name="context">El contexto de ejecución bajo el que la actividad se ejecuta.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ContainsString.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ContainsString.SearchValue">
+      <summary>Obtiene o establece el valor de destino.</summary>
+      <returns>Devuelve el valor de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Convert`2">
+      <summary>Una actividad para convertir un valor de entrada de un tipo a otro.</summary>
+      <typeparam name="TSource">Tipo de origen.</typeparam>
+      <typeparam name="TDestination">Tipo de destino.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Convert`2.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Convert`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Convert`2.#ctor(System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Convert`2" />.</summary>
+      <param name="input">Valor de entrada.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Convert`2.CacheMetadata(System.Activities.CodeActivityMetadata)">
+      <summary>Crea y valida una descripción de los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</summary>
+      <param name="metadata">Metadatos de la actividad que encapsulan los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Convert`2.Execute(System.Activities.CodeActivityContext)">
+      <summary>Realiza la ejecución de la actividad.</summary>
+      <param name="context">El contexto de ejecución bajo el que la actividad se ejecuta.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Convert`2.Input">
+      <summary>Obtiene o establece el valor de entrada.</summary>
+      <returns>Devuelve el valor de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ConvertTimeZone">
+      <summary>Una actividad para convertir un DateTime según un TimeZone de entrada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ConvertTimeZone.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ConvertTimeZone" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ConvertTimeZone.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ConvertTimeZone" />.</summary>
+      <param name="input">DateTime de entrada.</param>
+      <param name="sourceTimeZone">TimeZone de origen.</param>
+      <param name="destinationTimeZone">TimeZone de destino.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ConvertTimeZone.DestinationTimeZone">
+      <summary>Obtiene o establece la zona horaria de destino.</summary>
+      <returns>Devuelve la zona horaria de destino.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ConvertTimeZone.Input">
+      <summary>Obtiene o establece el valor DateTime de entrada.</summary>
+      <returns>Devuelve el valor DateTime de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ConvertTimeZone.SourceTimeZone">
+      <summary>Obtiene o establece la zona horaria de origen.</summary>
+      <returns>Devuelve la zona horaria de origen.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CreateDate">
+      <summary>Una actividad para crear un DateTime en función de campos de entrada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateDate.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CreateDate" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateDate.#ctor(System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CreateDate" />.</summary>
+      <param name="year">Valor del año.</param>
+      <param name="month">Valor del mes.</param>
+      <param name="day">Valor del día.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateDate.#ctor(System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CreateDate" />.</summary>
+      <param name="year">Valor del año.</param>
+      <param name="month">Valor del mes.</param>
+      <param name="day">Valor del día.</param>
+      <param name="hour">Valor de la hora.</param>
+      <param name="minute">Valor del minuto.</param>
+      <param name="second">Valor del segundo.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateDate.#ctor(System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.DateTimeKind})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CreateDate" />.</summary>
+      <param name="year">Valor del año.</param>
+      <param name="month">Valor del mes.</param>
+      <param name="day">Valor del día.</param>
+      <param name="hour">Valor de la hora.</param>
+      <param name="minute">Valor del minuto.</param>
+      <param name="second">Valor del segundo.</param>
+      <param name="kind">Tipo de DateTime, local o UTC.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Day">
+      <summary>Obtiene o establece el valor del día.</summary>
+      <returns>Devuelve el valor del día.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Hour">
+      <summary>Obtiene o establece el valor de la hora.</summary>
+      <returns>Devuelve el valor de la hora.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Kind">
+      <summary>Obtiene o establece el tipo de DateTime, local o UTC.</summary>
+      <returns>Devuelve el tipo de DateTime.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Minute">
+      <summary>Obtiene o establece el valor de los minutos.</summary>
+      <returns>Devuelve el valor de los minutos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Month">
+      <summary>Obtiene o establece el valor del mes.</summary>
+      <returns>Devuelve el valor del mes.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Second">
+      <summary>Obtiene o establece el valor de los segundos.</summary>
+      <returns>Devuelve el valor de los segundos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Year">
+      <summary>Obtiene o establece el valor del año.</summary>
+      <returns>Devuelve el valor del año.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CreateTimeSpan">
+      <summary>Una actividad para crear un TimeSpan en función de campos de entrada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateTimeSpan.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CreateTimeSpan" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateTimeSpan.#ctor(System.Activities.InArgument{System.Double},System.Activities.InArgument{System.Double},System.Activities.InArgument{System.Double},System.Activities.InArgument{System.Double})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CreateTimeSpan" />.</summary>
+      <param name="days">Valor de los días.</param>
+      <param name="hours">Valor de las horas.</param>
+      <param name="minutes">Valor de los minutos.</param>
+      <param name="seconds">Valor de los segundos.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateTimeSpan.Days">
+      <summary>Obtiene o establece el valor de los días.</summary>
+      <returns>Devuelve el valor de los días.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateTimeSpan.Hours">
+      <summary>Obtiene o establece el valor de las horas.</summary>
+      <returns>Devuelve el valor de las horas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateTimeSpan.Minutes">
+      <summary>Obtiene o establece el valor de los minutos.</summary>
+      <returns>Devuelve el valor de los minutos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateTimeSpan.Seconds">
+      <summary>Obtiene o establece el valor de los segundos.</summary>
+      <returns>Devuelve el valor de los segundos.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CurrentDate">
+      <summary>Una actividad para devolver el valor DateTime actual.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CurrentDate.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.CurrentDate" />.</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.DateField">
+      <summary>Representa un campo particular de un DateTime.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Year">
+      <summary>Valor del año.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Month">
+      <summary>Valor del mes.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Day">
+      <summary>Valor del día.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Hour">
+      <summary>Valor de la hora.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Minute">
+      <summary>Valor del minuto.</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Second">
+      <summary>Valor del segundo.</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.DateInRange">
+      <summary>Una actividad para comprobar si una fecha de entrada está en un intervalo particular.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.DateInRange.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.DateInRange" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.DateInRange.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.DateInRange" />.</summary>
+      <param name="input">Fecha de entrada que se va a comprobar.</param>
+      <param name="start">Fecha de inicio.</param>
+      <param name="end">Fecha final.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.DateInRange.End">
+      <summary>Obtiene o establece la fecha final.</summary>
+      <returns>Devuelve la fecha final.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.DateInRange.Input">
+      <summary>Obtiene o establece la fecha de entrada que se va a comprobar.</summary>
+      <returns>Devuelve la fecha de entrada que se va a comprobar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.DateInRange.Start">
+      <summary>Obtiene o establece la fecha de inicio.</summary>
+      <returns>Devuelve la fecha de inicio.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.DelayUntil">
+      <summary>Representa una actividad para retrasar la ejecución de flujo de trabajo hasta un valor DateTime particular.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.DelayUntil.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.DelayUntil" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.DelayUntil.#ctor(System.Activities.InArgument{System.DateTime})">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.DelayUntil" /> con fecha especificada para despertar al flujo de trabajo.</summary>
+      <param name="date">La fecha para despertar al flujo de trabajo.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.DelayUntil.Date">
+      <summary>Obtiene o establece la fecha para despertar al flujo de trabajo.</summary>
+      <returns>La fecha para despertar al flujo de trabajo.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Divide`1">
+      <summary>Una actividad para dividir dos números.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Divide`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Divide`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Divide`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Divide`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Divide`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Divide`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.EndsWithString">
+      <summary>Una actividad para determinar si una cadena acaba o no en una subcadena determinada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.EndsWithString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.EndsWithString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.EndsWithString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.EndsWithString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="searchValue">Cadena de búsqueda de destino.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.EndsWithString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Boolean)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.EndsWithString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="searchValue">Cadena de búsqueda de destino.</param>
+      <param name="ignoreCase">Si se tienen en cuenta o no las mayúsculas y minúsculas en la comparación.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.EndsWithString.IgnoreCase">
+      <summary>Obtiene o establece si se tienen en cuenta las mayúsculas y minúsculas.</summary>
+      <returns>Devuelve si se tienen en cuenta las mayúsculas y minúsculas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.EndsWithString.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.EndsWithString.SearchValue">
+      <summary>Obtiene o establece la cadena de búsqueda de destino.</summary>
+      <returns>Devuelve la cadena de búsqueda de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ExpressionContainerReference`1">
+      <summary>Una actividad que se usa para encapsular un árbol de expresión traducida de modo que la estructura se conserve a través de la traducción.</summary>
+      <typeparam name="TResult">Tipo de resultado.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerReference`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ExpressionContainerReference`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerReference`1.#ctor(System.Activities.Activity{System.Activities.Location{`0}},System.Collections.Generic.Dictionary{System.String,System.Activities.Argument})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ExpressionContainerReference`1" />.</summary>
+      <param name="expression">Árbol de expresión como actividades.</param>
+      <param name="arguments">Conjunto de argumentos para la expresión.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ExpressionContainerReference`1.Arguments">
+      <summary>Obtiene el conjunto de argumentos para la expresión.</summary>
+      <returns>Devuelve el conjunto de argumentos para la expresión.</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerReference`1.CacheMetadata(System.Activities.NativeActivityMetadata)">
+      <summary>Crea y valida una descripción de los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</summary>
+      <param name="metadata">Metadatos de la actividad que encapsulan los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerReference`1.Execute(System.Activities.NativeActivityContext)">
+      <summary>Ejecuta la lógica de ejecución de la actividad.</summary>
+      <param name="context">Contexto de ejecución en el que la actividad se ejecuta.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ExpressionContainerReference`1.Expression">
+      <summary>Obtiene o establece el árbol de expresión.</summary>
+      <returns>Devuelve el árbol de expresión.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ExpressionContainerValue`1">
+      <summary>Una actividad que se usa para encapsular un árbol de expresión traducida de modo que la estructura se conserve a través de la traducción.</summary>
+      <typeparam name="TResult">Tipo de resultado.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerValue`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ExpressionContainerValue`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerValue`1.#ctor(System.Activities.Activity{`0},System.Collections.Generic.Dictionary{System.String,System.Activities.Argument})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ExpressionContainerValue`1" />.</summary>
+      <param name="expression">Árbol de expresión como actividades.</param>
+      <param name="arguments">Conjunto de argumentos para la expresión.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ExpressionContainerValue`1.Arguments">
+      <summary>Obtiene el conjunto de argumentos para la expresión.</summary>
+      <returns>Devuelve el conjunto de argumentos para la expresión.</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerValue`1.CacheMetadata(System.Activities.NativeActivityMetadata)">
+      <summary>Crea y valida una descripción de los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</summary>
+      <param name="metadata">Metadatos de la actividad que encapsulan los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerValue`1.Execute(System.Activities.NativeActivityContext)">
+      <summary>Ejecuta la lógica de ejecución de la actividad.</summary>
+      <param name="context">Contexto de ejecución en el que la actividad se ejecuta.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ExpressionContainerValue`1.Expression">
+      <summary>Obtiene o establece el árbol de expresión.</summary>
+      <returns>Devuelve el árbol de expresión.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.FormatString">
+      <summary>Una actividad para dar formato a una cadena.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.FormatString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.FormatString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.FormatString.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.FormatString" />.</summary>
+      <param name="format">Cadena de entrada a la que se va a dar formato.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.FormatString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String}[])">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.FormatString" />.</summary>
+      <param name="format">Cadena de entrada a la que se va a dar formato.</param>
+      <param name="arguments">Argumentos que se van aplicar a la cadena de entrada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.FormatString.Arguments">
+      <summary>Obtiene o establece los argumentos que se van a aplicar a la cadena de entrada.</summary>
+      <returns>Devuelve los argumentos que se van aplicar a la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.FormatString.Format">
+      <summary>Obtiene o establece la cadena de entrada a la que se va a dar formato.</summary>
+      <returns>Devuelve la cadena de entrada a la que se va a dar formato.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetDateField">
+      <summary>Una actividad para recuperar un campo específico en un DateTime.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetDateField.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetDateField" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetDateField.#ctor(System.Activities.InArgument{System.DateTime})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetDateField" />.</summary>
+      <param name="input">DateTime de entrada.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetDateField.#ctor(System.Activities.InArgument{System.DateTime},Microsoft.Activities.Expressions.DateField)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetDateField" />.</summary>
+      <param name="input">DateTime de entrada.</param>
+      <param name="dateField">Campo de la fecha que se va a recuperar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateField.DateField">
+      <summary>Obtiene o establece el campo de la fecha que se va a recuperar.</summary>
+      <returns>Devuelve el campo de la fecha que se va a recuperar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateField.Input">
+      <summary>Obtiene o establece el valor DateTime de entrada.</summary>
+      <returns>Devuelve el valor DateTime de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetDateFields">
+      <summary>Representa una actividad para recuperar campos específicos en un DateTime.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetDateFields.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetDateFields" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Day">
+      <summary>Obtiene o establece el valor del día.</summary>
+      <returns>Valor del día.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Hour">
+      <summary>Obtiene o establece el valor de la hora.</summary>
+      <returns>Valor de la hora.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Input">
+      <summary>Obtiene o establece el valor DateTime de entrada.</summary>
+      <returns>DateTime de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Kind">
+      <summary>Obtiene o establece el tipo de terminal de enlace que admite el flujo de datos de una actividad.</summary>
+      <returns>El tipo de terminal de enlace que admite el flujo de datos de una actividad.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Minute">
+      <summary>Obtiene o establece el valor de los minutos.</summary>
+      <returns>Valor del minuto.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Month">
+      <summary>Obtiene o establece el valor del mes.</summary>
+      <returns>Valor del mes.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Second">
+      <summary>Obtiene o establece el valor de los segundos.</summary>
+      <returns>Valor del segundo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Year">
+      <summary>Obtiene o establece el valor del año.</summary>
+      <returns>Valor del año.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetElapsedDays">
+      <summary>Una actividad para calcular el número transcurrido de días entre dos valores DateTimes de entrada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetElapsedDays.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetElapsedDays" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetElapsedDays.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetElapsedDays" />.</summary>
+      <param name="start">Fecha y hora de inicio.</param>
+      <param name="end">Fecha y hora final.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedDays.End">
+      <summary>Obtiene o establece la fecha y la hora final.</summary>
+      <returns>Devuelve la fecha y hora final.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedDays.ExcludedDates">
+      <summary>Obtiene o establece el conjunto de fechas excluidas.</summary>
+      <returns>Devuelve el conjunto de fechas excluidas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedDays.ExcludeWeekends">
+      <summary>Obtiene o establece si se excluyen o no los fines de semana en el cálculo.</summary>
+      <returns>Devuelve si se excluyen o no los fines de semana en el cálculo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedDays.Start">
+      <summary>Obtiene o establece la fecha y la hora de inicio.</summary>
+      <returns>Devuelve la fecha y hora de inicio.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetElapsedTime">
+      <summary>Una actividad para calcular el tiempo transcurrido entre dos valores DateTimes de entrada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetElapsedTime.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetElapsedTime" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetElapsedTime.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetElapsedTime" />.</summary>
+      <param name="start">Fecha y hora de inicio.</param>
+      <param name="end">Fecha y hora final.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedTime.End">
+      <summary>Obtiene o establece la fecha y la hora final.</summary>
+      <returns>Devuelve la fecha y hora final.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedTime.Start">
+      <summary>Obtiene o establece la fecha y la hora de inicio.</summary>
+      <returns>Devuelve la fecha y hora de inicio.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetTimeSpanFields">
+      <summary>Una actividad para recuperar campos específicos en un TimeSpan.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetTimeSpanFields.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.GetTimeSpanFields" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Days">
+      <summary>Obtiene o establece el valor de los días.</summary>
+      <returns>Devuelve el valor de los días.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Hours">
+      <summary>Obtiene o establece el valor de las horas.</summary>
+      <returns>Devuelve el valor de las horas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Input">
+      <summary>Obtiene o establece el valor TimeSpan de entrada.</summary>
+      <returns>Devuelve el valor TimeSpan de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Minutes">
+      <summary>Obtiene o establece el valor de los minutos.</summary>
+      <returns>Devuelve el valor de los minutos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Seconds">
+      <summary>Obtiene o establece el valor de los segundos.</summary>
+      <returns>Devuelve el valor de los segundos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.TotalDays">
+      <summary>Obtiene o establece el número total de días.</summary>
+      <returns>Devuelve el número total de días.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.TotalHours">
+      <summary>Obtiene o establece el número total de horas.</summary>
+      <returns>Devuelve el número total de horas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.TotalMinutes">
+      <summary>Obtiene o establece el número total de minutos.</summary>
+      <returns>Devuelve el número total de minutos.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.TotalSeconds">
+      <summary>Obtiene o establece el número total de segundos.</summary>
+      <returns>Devuelve el número total de segundos.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IndexOfString">
+      <summary>Una actividad para encontrar el índice de una subcadena dentro de una cadena de entrada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IndexOfString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IndexOfString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IndexOfString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IndexOfString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="searchValue">Valor que se va a buscar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IndexOfString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.Int32})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IndexOfString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="searchValue">Valor que se va a buscar.</param>
+      <param name="startIndex">Índice para empezar a buscar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IndexOfString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IndexOfString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="searchValue">Valor que se va a buscar.</param>
+      <param name="startIndex">Índice para iniciar la búsqueda.</param>
+      <param name="count">Número de caracteres que se va a buscar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IndexOfString.Count">
+      <summary>Obtiene o establece el número de caracteres que se va a buscar.</summary>
+      <returns>Devuelve el número de caracteres que se va a buscar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IndexOfString.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IndexOfString.SearchValue">
+      <summary>Obtiene o establece el valor que se va a buscar.</summary>
+      <returns>Devuelve el valor que se va a buscar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IndexOfString.StartIndex">
+      <summary>Obtiene o establece el índice para iniciar la búsqueda.</summary>
+      <returns>Devuelve el índice para iniciar la búsqueda.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEmptyGuid">
+      <summary>Una actividad para comprobar si un GUID está o no vacío.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyGuid.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEmptyGuid" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyGuid.#ctor(System.Activities.InArgument{System.Guid})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEmptyGuid" />.</summary>
+      <param name="value">GUID de entrada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEmptyGuid.Value">
+      <summary>Obtiene o establece el GUID de entrada.</summary>
+      <returns>Devuelve el GUID de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEmptyString">
+      <summary>Una actividad para comprobar si una cadena está vacía.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEmptyString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyString.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEmptyString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyString.#ctor(System.Activities.InArgument{System.String},System.Boolean)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEmptyString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="checkForWhiteSpace">Si se comprueba o no el espacio en blanco.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEmptyString.CheckForWhiteSpace">
+      <summary>Obtiene o establece si se comprueba o no el espacio en blanco.</summary>
+      <returns>Devuelve si se comprueba o no el espacio en blanco.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEmptyString.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEqualBoolean">
+      <summary>Una actividad para comprobar si dos valores booleanos son iguales.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualBoolean.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEqualBoolean" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualBoolean.#ctor(System.Activities.InArgument{System.Boolean},System.Activities.InArgument{System.Boolean})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEqualBoolean" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualBoolean.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualBoolean.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEqualGuid">
+      <summary>Una actividad para comprobar si dos GUID son iguales.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualGuid.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEqualGuid" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualGuid.#ctor(System.Activities.InArgument{System.Guid},System.Activities.InArgument{System.Guid})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEqualGuid" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualGuid.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualGuid.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEqualNumber`1">
+      <summary>Una actividad para comprobar si dos números son iguales.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualNumber`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEqualNumber`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualNumber`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEqualNumber`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualNumber`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualNumber`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEqualString">
+      <summary>Una actividad para comprobar si dos cadenas coinciden, opcionalmente según un modelo de expresiones regulares.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEqualString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsEqualString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="text">Texto de destino.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualString.IgnoreCase">
+      <summary>Obtiene o establece si se ignoran o no las mayúsculas y minúsculas.</summary>
+      <returns>Devuelve si se ignoran o no las mayúsculas y minúsculas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualString.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualString.Pattern">
+      <summary>Obtiene o establece el modelo de expresiones regulares que se va a usar.</summary>
+      <returns>Devuelve el modelo de expresiones regulares que se va a usar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualString.Text">
+      <summary>Obtiene o establece el texto de destino que se va a hacer coincidir.</summary>
+      <returns>Devuelve el texto de destino que se va a hacer coincidir.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsFalse">
+      <summary>Una actividad para comprobar si una expresión es falsa.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsFalse.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsFalse" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsFalse.#ctor(System.Activities.InArgument{System.Boolean})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsFalse" />.</summary>
+      <param name="input">Expresión de entrada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsFalse.Input">
+      <summary>Obtiene o establece la expresión de entrada.</summary>
+      <returns>Devuelve la expresión de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsGreaterThan`1">
+      <summary>Una actividad para comprobar si un número es mayor que otro número.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsGreaterThan`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsGreaterThan`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsGreaterThan`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsGreaterThan`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsGreaterThan`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsGreaterThan`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1">
+      <summary>Una actividad para comprobar si un número es mayor o igual que otro número.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsLessThan`1">
+      <summary>Una actividad para comprobar si un número es menor que otro número.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsLessThan`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsLessThan`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsLessThan`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsLessThan`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsLessThan`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsLessThan`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsLessThanOrEqual`1">
+      <summary>Una actividad para comprobar si un número es menor o igual que otro número.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsLessThanOrEqual`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsLessThanOrEqual`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsLessThanOrEqual`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsLessThanOrEqual`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsLessThanOrEqual`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsLessThanOrEqual`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsTrue">
+      <summary>Una actividad para comprobar si una expresión es verdadera.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsTrue.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsTrue" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsTrue.#ctor(System.Activities.InArgument{System.Boolean})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.IsTrue" />.</summary>
+      <param name="input">Expresión de entrada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsTrue.Input">
+      <summary>Obtiene o establece la expresión de entrada.</summary>
+      <returns>Devuelve la expresión de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Mod`1">
+      <summary>Una actividad para ejecutar una operación MOD.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Mod`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Mod`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Mod`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Mod`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Mod`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Mod`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Multiply`1">
+      <summary>Una actividad para multiplicar dos números.</summary>
+      <typeparam name="T">Tipo de los números.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Multiply`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Multiply`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Multiply`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Multiply`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Multiply`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Multiply`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.NewGuid">
+      <summary>Una actividad para crear un nuevo GUID.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.NewGuid.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.NewGuid" />.</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Not">
+      <summary>Una actividad para ejecutar una operación NOT binaria.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Not.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Not" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Not.#ctor(System.Activities.InArgument{System.Boolean})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Not" />.</summary>
+      <param name="operand">Operando que se va a usar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Not.Operand">
+      <summary>Obtiene o establece el operando que se va a usar.</summary>
+      <returns>Devuelve el operando que se va a usar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.NullLiteral`1">
+      <summary>Una actividad para especificar un valor de null.</summary>
+      <typeparam name="T">Tipo del valor devuelto.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.NullLiteral`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.NullLiteral`1" />.</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Or">
+      <summary>Una actividad para ejecutar una operación OR binaria.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Or.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Or" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Or.#ctor(System.Activities.InArgument{System.Boolean},System.Activities.InArgument{System.Boolean})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Or" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Or.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Or.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ParseBoolean">
+      <summary>Una actividad para analizar un booleano.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseBoolean.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseBoolean" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseBoolean.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseBoolean" />.</summary>
+      <param name="input">Valor que se va a analizar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseBoolean.Input">
+      <summary>Obtiene o establece el valor que se va a analizar.</summary>
+      <returns>Devuelve el valor que se va a analizar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ParseDate">
+      <summary>Una actividad para analizar una fecha.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseDate.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseDate" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseDate.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseDate" />.</summary>
+      <param name="value">Valor que se va a analizar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseDate.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseDate" />.</summary>
+      <param name="value">Valor que se va a analizar.</param>
+      <param name="cultureName">Referencia cultural de destino.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseDate.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.Globalization.DateTimeStyles})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseDate" />.</summary>
+      <param name="value">Valor que se va a analizar.</param>
+      <param name="cultureName">Referencia cultural de destino.</param>
+      <param name="dateTimeStyles">Estilo del DateTime.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseDate.CultureName">
+      <summary>Obtiene o establece la referencia cultural de destino.</summary>
+      <returns>Devuelve la referencia cultural de destino.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseDate.DateTimeStyles">
+      <summary>Obtiene o establece el estilo del DateTime.</summary>
+      <returns>Devuelve el estilo del DateTime.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseDate.Value">
+      <summary>Obtiene o establece el valor que se va a analizar.</summary>
+      <returns>Devuelve el valor que se va a analizar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ParseGuid">
+      <summary>Una actividad para analizar un GUID.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseGuid.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseGuid" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseGuid.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseGuid" />.</summary>
+      <param name="value">Valor que se va a analizar.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseGuid.Value">
+      <summary>Obtiene o establece el valor que se va a analizar.</summary>
+      <returns>Devuelve el valor que se va a analizar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ParseNumber`1">
+      <summary>Una actividad para analizar un número.</summary>
+      <typeparam name="T">Tipo del número.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" />.</summary>
+      <param name="value">Valor que se va a analizar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.Globalization.NumberStyles})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" />.</summary>
+      <param name="value">Valor que se va a analizar.</param>
+      <param name="numberStyles">Estilo del número.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" />.</summary>
+      <param name="value">Valor que se va a analizar.</param>
+      <param name="cultureName">Referencia cultural de destino.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.Globalization.NumberStyles})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" />.</summary>
+      <param name="value">Valor que se va a analizar.</param>
+      <param name="cultureName">Referencia cultural de destino.</param>
+      <param name="numberStyles">Estilo del número.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseNumber`1.CultureName">
+      <summary>Obtiene o establece la referencia cultural de destino.</summary>
+      <returns>Devuelve la referencia cultural de destino.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseNumber`1.NumberStyles">
+      <summary>Obtiene o establece el estilo del número.</summary>
+      <returns>Devuelve el estilo del número.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseNumber`1.Value">
+      <summary>Obtiene o establece el valor que se va a analizar.</summary>
+      <returns>Devuelve el valor que se va a analizar.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ReplaceString">
+      <summary>Una actividad para reemplazar el contenido de una cadena, usando opcionalmente expresiones regulares.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ReplaceString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ReplaceString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ReplaceString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ReplaceString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="existingValue">Valor que se va a reemplazar.</param>
+      <param name="replacement">Valor de reemplazo.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ReplaceString.ExistingValue">
+      <summary>Obtiene o establece el valor que se va a reemplazar.</summary>
+      <returns>Devuelve el valor que se va a reemplazar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ReplaceString.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ReplaceString.Pattern">
+      <summary>Obtiene o establece el modelo de expresiones regulares que se va a usar.</summary>
+      <returns>Devuelve el modelo de expresiones regulares que se va a usar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ReplaceString.Replacement">
+      <summary>Obtiene o establece el valor de reemplazo.</summary>
+      <returns>Devuelve el valor de reemplazo</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.SplitString">
+      <summary>Una actividad para dividir una cadena según un separador.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SplitString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.SplitString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SplitString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.SplitString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="separator">Separador en el que se va a dividir.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SplitString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.StringSplitOptions)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.SplitString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="separator">Separador en el que se va a dividir.</param>
+      <param name="stringSplitOptions">Opciones de la división.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SplitString.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SplitString.Separator">
+      <summary>Obtiene o establece el separador en el que se va a dividir.</summary>
+      <returns>Devuelve el separador en el que se va a dividir.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SplitString.StringSplitOptions">
+      <summary>Obtiene o establece las opciones de la división.</summary>
+      <returns>Devuelve las opciones de la división.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.StartsWithString">
+      <summary>Una actividad para determinar si una cadena empieza o no por una subcadena determinada.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StartsWithString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.StartsWithString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StartsWithString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.StartsWithString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="searchValue">Valor que se va a buscar.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StartsWithString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Boolean)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.StartsWithString" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="searchValue">Cadena de búsqueda de destino.</param>
+      <param name="ignoreCase">Si se tienen en cuenta o no las mayúsculas y minúsculas en la comparación.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.StartsWithString.IgnoreCase">
+      <summary>Obtiene o establece si se tienen en cuenta las mayúsculas y minúsculas.</summary>
+      <returns>Devuelve si se tienen en cuenta las mayúsculas y minúsculas.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.StartsWithString.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.StartsWithString.SearchValue">
+      <summary>Obtiene o establece la cadena de búsqueda de destino.</summary>
+      <returns>Devuelve la cadena de búsqueda de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.StringLength">
+      <summary>Una actividad para devolver la longitud de una cadena.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StringLength.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.StringLength" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StringLength.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.StringLength" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.StringLength.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Substring">
+      <summary>Una actividad para devolver una subcadena de una instancia de cadena.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Substring.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Substring" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Substring.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.Int32})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Substring" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="startIndex">Índice de inicio.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Substring.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Substring" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="startIndex">Índice de inicio.</param>
+      <param name="length">Longitud de destino de la subcadena.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Substring.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Substring.Length">
+      <summary>Obtiene o establece la longitud de destino de la subcadena.</summary>
+      <returns>Devuelve la longitud de destino de la subcadena.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Substring.StartIndex">
+      <summary>Obtiene o establece el índice de inicio.</summary>
+      <returns>Devuelve el índice de inicio.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Subtract`1">
+      <summary>Una actividad para sustraer números.</summary>
+      <typeparam name="T">Tipo de los objetos que se van a sustraer.</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Subtract`1.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Subtract`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Subtract`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Subtract`1" />.</summary>
+      <param name="left">Valor izquierdo.</param>
+      <param name="right">Valor derecho.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Subtract`1.Left">
+      <summary>Obtiene o establece el valor izquierdo.</summary>
+      <returns>Devuelve el valor izquierdo.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Subtract`1.Right">
+      <summary>Obtiene o establece el valor derecho.</summary>
+      <returns>Devuelve el valor derecho.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.SubtractFromDate">
+      <summary>Una actividad para sustraer de una fecha.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SubtractFromDate.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.SubtractFromDate" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SubtractFromDate.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.TimeSpan})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.SubtractFromDate" />.</summary>
+      <param name="input">Fecha de entrada.</param>
+      <param name="timeSpan">Cantidad de tiempo que se va a sustraer.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Days">
+      <summary>Obtiene o establece el número de días que se va a substraer.</summary>
+      <returns>Devuelve el número de días que se va a sustraer.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Hours">
+      <summary>Obtiene o establece el número de horas que se va a substraer.</summary>
+      <returns>Devuelve el número de horas que se va a sustraer.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Input">
+      <summary>Obtiene o establece la fecha de entrada.</summary>
+      <returns>Devuelve la fecha de entrada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Minutes">
+      <summary>Obtiene o establece el número de minutos que se va a substraer.</summary>
+      <returns>Devuelve el número de minutos que se va a sustraer.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Seconds">
+      <summary>Obtiene o establece el número de días que se va a substraer.</summary>
+      <returns>Devuelve el número de días que se va a sustraer.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.TimeSpan">
+      <summary>Obtiene o establece el período de tiempo completo que se va a sustraer.</summary>
+      <returns>Devuelve el período de tiempo que se va a sustraer.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ToLowerCase">
+      <summary>Una actividad para convertir una cadena en minúsculas.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToLowerCase.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ToLowerCase" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToLowerCase.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ToLowerCase" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToLowerCase.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ToString">
+      <summary>Una actividad para llamar a ToString en un objeto.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToString.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ToString" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToString.#ctor(System.Activities.InArgument)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ToString" />.</summary>
+      <param name="targetObject">Objeto de destino.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToString.#ctor(System.Activities.InArgument,System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ToString" />.</summary>
+      <param name="targetObject">Objeto de destino.</param>
+      <param name="format">El formato.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToString.#ctor(System.Activities.InArgument,System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ToString" />.</summary>
+      <param name="targetObject">Objeto de destino.</param>
+      <param name="format">El formato.</param>
+      <param name="cultureName">Referencia cultural.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToString.CultureName">
+      <summary>Obtiene o establece la referencia cultural que se va a usar.</summary>
+      <returns>Devuelve la referencia cultural que se va a usar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToString.Format">
+      <summary>Obtiene o establece el formato que se va a usar.</summary>
+      <returns>Devuelve el formato que se va a usar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToString.Object">
+      <summary>Obtiene o establece el objeto de destino.</summary>
+      <returns>Devuelve el objeto de destino.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ToUpperCase">
+      <summary>Una actividad para convertir una cadena en mayúsculas.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToUpperCase.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ToUpperCase" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToUpperCase.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.ToUpperCase" />.</summary>
+      <param name="input">Cadena de entrada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToUpperCase.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Devuelve la cadena de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Trim">
+      <summary>Representa una actividad para recortar una cadena.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Trim.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Trim" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Trim.#ctor(System.Activities.InArgument{System.String})">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Trim" /> con una cadena de entrada.</summary>
+      <param name="input">Cadena de entrada.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Trim.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Activities.Expressions.Trim" /> con una cadena de entrada y caracteres recortados.</summary>
+      <param name="input">Cadena de entrada.</param>
+      <param name="characters">Los caracteres recortados.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Trim.Characters">
+      <summary>Obtiene o establece los caracteres que se van a recortar.</summary>
+      <returns>Los caracteres que se van a recortar.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Trim.Input">
+      <summary>Obtiene o establece la cadena de entrada.</summary>
+      <returns>Cadena de entrada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.BuildMatchAllFilter">
+      <summary>Una actividad para compilar un filtro de coincidencia de todas las suscripciones.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.BuildMatchAllFilter.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.BuildMatchAllFilter" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.BuildMatchAllFilter.Matches">
+      <summary>Obtiene o establece los nombres y valores para hacer coincidir en el mensaje de notificación.</summary>
+      <returns>Devuelve el conjunto de coincidencias configuradas.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.GetS2SSecurityToken">
+      <summary>Una actividad para crear un token de seguridad OAuth2 S2S en función de la configuración de seguridad del ámbito.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.GetS2SSecurityToken.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.GetS2SSecurityToken" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.GetS2SSecurityToken.IsAppOnlySecurity">
+      <summary>Obtiene o establece si se usa o no la identidad de la aplicación del flujo de trabajo solamente.</summary>
+      <returns>Devuelve la configuración de solamente la aplicación configurada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpDelete">
+      <summary>Una actividad para enviar una solicitud HTTP DELETE y recibir la respuesta HTTP.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpDelete.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.HttpDelete" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.HttpErrorHandler">
+      <summary>Obtiene o establece un delegado de la actividad para procesar respuestas de error e intentar probarlo de nuevo.</summary>
+      <returns>Devuelve el controlador de error configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.RequestHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de solicitud.</summary>
+      <returns>Devuelve los encabezados del mensaje de solicitud.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.ResponseContent">
+      <summary>Obtiene o establece el contenido del mensaje de respuesta.</summary>
+      <returns>Devuelve el contenido del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.ResponseHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de respuesta.</summary>
+      <returns>Devuelve los encabezados del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.ResponseStatusCode">
+      <summary>Obtiene o establece el código de estado del mensaje de respuesta.</summary>
+      <returns>Devuelve el código de estado del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.RetryOnConnectionFailure">
+      <summary>Obtiene o establece si se vuelve a intentar o no tras los errores de conexión.</summary>
+      <returns>Devuelve si se vuelve a intentar o no tras los errores de conexión.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.SecurityToken">
+      <summary>Obtiene o establece el token de seguridad.</summary>
+      <returns>Devuelve el token de seguridad configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.Uri">
+      <summary>Obtiene o establece el URI de destino.</summary>
+      <returns>Devuelve el URI configurado.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpGet">
+      <summary>Una actividad para enviar una solicitud HTTP GET y recibir la respuesta HTTP.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpGet.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.HttpGet" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.HttpErrorHandler">
+      <summary>Obtiene o establece un delegado de la actividad para procesar respuestas de error e intentar probarlo de nuevo.</summary>
+      <returns>Devuelve el controlador de error configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.RequestHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de solicitud.</summary>
+      <returns>Devuelve los encabezados del mensaje de solicitud.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.ResponseContent">
+      <summary>Obtiene o establece el contenido del mensaje de respuesta.</summary>
+      <returns>Devuelve el contenido del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.ResponseHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de respuesta.</summary>
+      <returns>Devuelve los encabezados del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.ResponseStatusCode">
+      <summary>Obtiene o establece el código de estado del mensaje de respuesta.</summary>
+      <returns>Devuelve el código de estado del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.RetryOnConnectionFailure">
+      <summary>Obtiene o establece si se vuelve a intentar o no tras los errores de conexión.</summary>
+      <returns>Devuelve si se vuelve a intentar o no tras los errores de conexión.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.SecurityToken">
+      <summary>Obtiene o establece el token de seguridad.</summary>
+      <returns>Devuelve el token de seguridad configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.Uri">
+      <summary>Obtiene o establece el URI de destino.</summary>
+      <returns>Devuelve el URI configurado.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpMerge">
+      <summary>Una actividad para enviar una solicitud HTTP MERGE y recibir la respuesta HTTP.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpMerge.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.HttpMerge" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.Etag">
+      <summary>Obtiene o establece la Etag que se va a usar para determinar la combinación.</summary>
+      <returns>Devuelve la Etag configurada.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.HttpErrorHandler">
+      <summary>Obtiene o establece un delegado de la actividad para procesar respuestas de error e intentar probarlo de nuevo.</summary>
+      <returns>Devuelve el controlador de error configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.RequestContent">
+      <summary>Obtiene o establece el contenido del mensaje de solicitud.</summary>
+      <returns>Devuelve el contenido del mensaje de solicitud.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.ResponseContent">
+      <summary>Obtiene o establece el contenido del mensaje de respuesta.</summary>
+      <returns>Devuelve el contenido del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.ResponseHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de respuesta.</summary>
+      <returns>Devuelve los encabezados del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.ResponseStatusCode">
+      <summary>Obtiene o establece el código de estado del mensaje de respuesta.</summary>
+      <returns>Devuelve el código de estado del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.RetryOnConnectionFailure">
+      <summary>Obtiene o establece si se vuelve a intentar o no tras los errores de conexión.</summary>
+      <returns>Devuelve si se vuelve a intentar o no tras los errores de conexión.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.Uri">
+      <summary>Obtiene o establece el URI de destino.</summary>
+      <returns>Devuelve el URI configurado.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpPost">
+      <summary>Una actividad para enviar una solicitud HTTP POST y recibir la respuesta HTTP.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpPost.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.HttpPost" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.HttpErrorHandler">
+      <summary>Obtiene o establece un delegado de la actividad para procesar respuestas de error e intentar probarlo de nuevo.</summary>
+      <returns>Devuelve el controlador de error configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.RequestContent">
+      <summary>Obtiene o establece el contenido del mensaje de solicitud.</summary>
+      <returns>Devuelve el contenido del mensaje de solicitud.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.RequestHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de solicitud.</summary>
+      <returns>Devuelve los encabezados del mensaje de solicitud.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.ResponseContent">
+      <summary>Obtiene o establece el contenido del mensaje de respuesta.</summary>
+      <returns>Devuelve el contenido del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.ResponseHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de respuesta.</summary>
+      <returns>Devuelve los encabezados del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.ResponseStatusCode">
+      <summary>Obtiene o establece el código de estado del mensaje de respuesta.</summary>
+      <returns>Devuelve el código de estado del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.RetryOnConnectionFailure">
+      <summary>Obtiene o establece si se vuelve a intentar o no tras los errores de conexión.</summary>
+      <returns>Devuelve si se vuelve a intentar o no tras los errores de conexión.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.SecurityToken">
+      <summary>Obtiene o establece el token de seguridad.</summary>
+      <returns>Devuelve el token de seguridad configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.Uri">
+      <summary>Obtiene o establece el URI de destino.</summary>
+      <returns>Devuelve el URI configurado.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpPut">
+      <summary>Una actividad para enviar una solicitud HTTP PUT y recibir la respuesta HTTP.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpPut.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.HttpPut" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.HttpErrorHandler">
+      <summary>Obtiene o establece un delegado de la actividad para procesar respuestas de error e intentar probarlo de nuevo.</summary>
+      <returns>Devuelve el controlador de error configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.RequestContent">
+      <summary>Obtiene o establece el contenido del mensaje de solicitud.</summary>
+      <returns>Devuelve el contenido del mensaje de solicitud.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.RequestHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de solicitud.</summary>
+      <returns>Devuelve los encabezados del mensaje de solicitud.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.ResponseContent">
+      <summary>Obtiene o establece el contenido del mensaje de respuesta.</summary>
+      <returns>Devuelve el contenido del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.ResponseHeaders">
+      <summary>Obtiene o establece los encabezados del mensaje de respuesta.</summary>
+      <returns>Devuelve los encabezados del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.ResponseStatusCode">
+      <summary>Obtiene o establece el código de estado del mensaje de respuesta.</summary>
+      <returns>Devuelve el código de estado del mensaje de respuesta.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.RetryOnConnectionFailure">
+      <summary>Obtiene o establece si se vuelve a intentar o no tras los errores de conexión.</summary>
+      <returns>Devuelve si se vuelve a intentar o no tras los errores de conexión.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.SecurityToken">
+      <summary>Obtiene o establece el token de seguridad.</summary>
+      <returns>Devuelve el token de seguridad configurado.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.Uri">
+      <summary>Obtiene o establece el URI de destino.</summary>
+      <returns>Devuelve el URI configurado.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter">
+      <summary>Especifica un filtro de suscripción para coincidencias exactas de un conjunto de propiedades de mensaje.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter.Matches">
+      <summary>Obtiene el conjunto de nombres y valores de propiedad que deben coincidir exactamente.</summary>
+      <returns>Devuelve el conjunto de nombres y valores de propiedad en el filtro de suscripción.</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter.Validate(System.Boolean)">
+      <summary>Valida el filtro de suscripción.</summary>
+      <returns>Devuelve el éxito o el error de la validación.</returns>
+      <param name="throwExceptionOnFailure">Si se va a mostrar o no una excepción en el error de validación.</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter">
+      <summary>Especifica una condición OR sobre un conjunto de filtros de suscripción.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter.Filters">
+      <summary>Obtiene el conjunto de filtros de suscripción.</summary>
+      <returns>Devuelve el conjunto de filtros de suscripción.</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter.Validate(System.Boolean)">
+      <summary>Valida el filtro de suscripción.</summary>
+      <returns>Devuelve el éxito o el error de la validación.</returns>
+      <param name="throwExceptionOnFailure">Si se va a mostrar o no una excepción en el error de validación.</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.ReceiveNotification">
+      <summary>Una actividad para recibir un mensaje de notificación.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.ReceiveNotification.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.ReceiveNotification" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.ReceiveNotification.#ctor(System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionFilter})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.ReceiveNotification" />.</summary>
+      <param name="filter">Filtro que se va a agregar a la suscripción.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.ReceiveNotification.#ctor(System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionHandle})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.ReceiveNotification" />.</summary>
+      <param name="subscriptionHandle">Un controlador para la regla de suscripción creada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.ReceiveNotification.Content">
+      <summary>Obtiene o establece el contenido del mensaje de notificación.</summary>
+      <returns>Devuelve el contenido del mensaje de notificación.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.ReceiveNotification.Filter">
+      <summary>Obtiene o establece el filtro que se va a agregar a la suscripción.</summary>
+      <returns>Devuelve el filtro que se va a agregar a la suscripción.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.ReceiveNotification.Properties">
+      <summary>Obtiene las propiedades de mensaje del mensaje de notificación.</summary>
+      <returns>Devuelve las propiedades de mensaje del mensaje de notificación.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.ReceiveNotification.SubscriptionHandle">
+      <summary>Obtiene o establece el controlador para la regla de suscripción creada.</summary>
+      <returns>Devuelve el controlador para la regla de suscripción creada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.SecurityToken">
+      <summary>Una clase base que representa un token de seguridad.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityToken.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.SecurityToken" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityToken.WriteTo(System.Net.Http.HttpRequestMessage)">
+      <summary>Llamado por el tiempo de ejecución para escribir el token de seguridad en el mensaje de solicitud.</summary>
+      <param name="request">Mensaje de solicitud al que se va a agregar el token de seguridad.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityToken.WriteTo(System.ServiceModel.ChannelFactory)">
+      <summary>Llamado por el tiempo de ejecución para escribir el token de seguridad en el mensaje de solicitud.</summary>
+      <param name="factory">Fábrica a la que se va a agregar el token de seguridad.</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.SecurityTokenScope">
+      <summary>Representa una actividad para especificar un token de seguridad en un conjunto de actividades.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityTokenScope.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.SecurityTokenScope" />.</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.SecurityTokenScope.Body">
+      <summary>Obtiene o establece las actividades del ámbito.</summary>
+      <returns>Actividades del ámbito.</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityTokenScope.CacheMetadata(System.Activities.NativeActivityMetadata)">
+      <summary>Compila y valida una descripción de los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</summary>
+      <param name="metadata">Metadatos de la actividad que encapsulan los argumentos de la actividad, las variables, las actividades secundarias y los delegados de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityTokenScope.Execute(System.Activities.NativeActivityContext)">
+      <summary>Llamado por el tiempo de ejecución de flujo de trabajo para ejecutar la actividad <see cref="T:Microsoft.Activities.Messaging.SecurityTokenScope" />.</summary>
+      <param name="context">Contexto de la actividad nativa.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.SecurityTokenScope.SecurityToken">
+      <summary>Obtiene o establece el token de seguridad que se va a aplicar al ámbito.</summary>
+      <returns>Token de seguridad del ámbito.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.Subscribe">
+      <summary>Una actividad para suscribir el flujo de trabajo a las notificaciones en función de un filtro especificado.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.Subscribe.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.Subscribe" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.Subscribe.#ctor(System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionFilter},System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionHandle})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.Subscribe" />.</summary>
+      <param name="filter">Filtro que se va a agregar a la suscripción.</param>
+      <param name="subscriptionHandle">Un controlador para la regla de suscripción creada.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.Subscribe.Filter">
+      <summary>Obtiene o establece el filtro que se va a agregar a la suscripción.</summary>
+      <returns>Devuelve el filtro que se va a agregar a la suscripción.</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.Subscribe.SubscriptionHandle">
+      <summary>Obtiene o establece el controlador para la regla de suscripción creada.</summary>
+      <returns>Devuelve el controlador para la regla de suscripción creada.</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.SubscriptionFilter">
+      <summary>Una clase base que representa un filtro de suscripción.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SubscriptionFilter.Validate(System.Boolean)">
+      <summary>Valida el filtro de suscripción.</summary>
+      <returns>Devuelve el éxito o el error de la validación.</returns>
+      <param name="throwExceptionOnFailure">Si se va a mostrar o no una excepción en el error de validación.</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.SubscriptionHandle">
+      <summary>Un controlador que almacena la suscripción creada por la actividad Subscribe o ReceiveNotification.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SubscriptionHandle.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.SubscriptionHandle" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SubscriptionHandle.OnUninitialize(System.Activities.HandleInitializationContext)">
+      <summary>Llamado cuando el controlador de suscripción sale fuera del ámbito para limpiar la suscripción.</summary>
+      <param name="context">Contexto del tiempo de ejecución del controlador.</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.Unsubscribe">
+      <summary>Esta actividad se usa para cancelar la suscripción a la recepción de notificaciones en el filtro especificado por el controlador de suscripciones.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.Unsubscribe.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.Unsubscribe" />.</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.Unsubscribe.#ctor(System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionHandle})">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Activities.Messaging.Unsubscribe" />.</summary>
+      <param name="subscriptionHandle">El controlador para la suscripción creada desde la actividad Subscribe o ReceiveNotification.</param>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.Unsubscribe.SubscriptionHandle">
+      <summary>Obtiene o establece el controlador para la suscripción creada desde la actividad Subscribe o ReceiveNotification.</summary>
+      <returns>Devuelve el controlador de la suscripción.</returns>
+    </member>
+  </members>
+</doc>

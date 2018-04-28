@@ -1,0 +1,1937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Workflow.Client</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Workflow.Client.ActivityDescription">
+      <summary>Descripción de la actividad del flujo de trabajo</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityDescription.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityDescription" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityDescription.#ctor(System.Xml.Linq.XElement)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityDescription" />.</summary>
+      <param name="activityXaml">Definición Xaml de esta actividad</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ActivityDescription.LastModified">
+      <summary>Obtiene el valor DateTime cuando la actividad se modificó por última vez</summary>
+      <returns>UTC DateTime</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ActivityDescription.Metadata">
+      <summary>Obtiene la colección de metadatos para esta actividad.</summary>
+      <returns>IDictionary de pares clave-valor que representa los metadatos para esta actividad.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ActivityDescription.Name">
+      <summary>Obtiene o establece el nombre de esta actividad.</summary>
+      <returns>Cadena que representa el nombre de esta actividad.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityDescription.SetXaml(System.Xml.Linq.XElement)">
+      <summary>Establece la definición Xaml de esta propiedad.</summary>
+      <param name="activityXaml">Xelement que representa la definición Xaml de esta actividad.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ActivityDescription.Xaml">
+      <summary>Obtiene la definición Xaml de esta actividad.</summary>
+      <returns>Xelement que representa la definición Xaml de esta actividad.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ActivityManager">
+      <summary>Permite administrar actividades de flujo de trabajo en el ámbito actual.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Delete">
+      <summary>Elimina todas las actividades de flujo de trabajo en el ámbito actual.</summary>
+      <returns>Número de actividades de flujo de trabajo eliminadas.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Delete(System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Elimina actividades de flujo de trabajo que coinciden con el filtro de metadatos especificado en el ámbito actual.</summary>
+      <returns>Número de actividades de flujo de trabajo eliminadas.</returns>
+      <param name="metadataFilter">Filtro de metadatos de las actividades que se van a eliminar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Delete(System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)">
+      <summary>Elimina actividades de flujo de trabajo que coinciden con el filtro de metadatos especificado en el ámbito actual y termina opcionalmente instancias de flujo de trabajo dependientes.</summary>
+      <returns>Número de actividades de flujo de trabajo eliminadas.</returns>
+      <param name="metadataFilter">Colección de metaDataFilters que especifica los criterios para que se eliminen flujos de trabajo.</param>
+      <param name="terminateDependentInstances">true si todas las instancias existentes de cualquier flujo de trabajo que usó una actividad eliminada deberían terminarse; false si las instancias existentes de los flujos de trabajo afectados deberían continuar la ejecución.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Delete(System.String)">
+      <summary>Elimina la actividad de flujo de trabajo especificada.</summary>
+      <param name="activityName">Nombre de la actividad que se va a eliminar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Delete(System.String,System.Boolean)">
+      <summary>Elimina la actividad de flujo de trabajo específico y termina opcionalmente instancias de flujo de trabajo dependiente.</summary>
+      <param name="activityName">Nombre de la actividad que se va a eliminar.</param>
+      <param name="terminateDependentInstances">true si todas las instancias existentes de cualquier flujo de trabajo que usó una actividad eliminada deberían terminarse; false si las instancias existentes de los flujos de trabajo afectados deberían continuar la ejecución.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Get">
+      <summary>Recupera todas las actividades de flujo de trabajo en el ámbito actual.</summary>
+      <returns>Colección de ActivityDescriptions para las actividades de flujo de trabajo recuperado.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Get(System.Int32,System.Int32)">
+      <summary>Recupera actividades de flujo de trabajo en el ámbito actual mediante la paginación.</summary>
+      <returns>Colección de ActivityDescriptions para las actividades de flujo de trabajo recuperado.</returns>
+      <param name="skip">Número de actividades que se van a omitir.</param>
+      <param name="count">Número de actividades que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Get(System.Int32,System.Int32,System.Boolean)">
+      <summary>Recupera actividades de flujo incluyendo opcionalmente sus definiciones Xaml.</summary>
+      <returns>Colección de ActivityDescriptions para las actividades de flujo de trabajo recuperado.</returns>
+      <param name="skip">Número de actividades que se van a omitir.</param>
+      <param name="count">Número de actividades que se van a recuperar.</param>
+      <param name="includeXaml">True si la definición Xaml para las actividades de flujo de trabajo deberían recuperarse. De lo contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Get(System.Int32,System.Int32,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Recupera actividades de flujo de trabajo que coinciden con el filtro de metadatos especificado incluyendo opcionalmente sus definiciones Xaml.</summary>
+      <returns>Colección de ActivityDescriptions para las actividades de flujo de trabajo recuperado.</returns>
+      <param name="skip">Número de actividades que se van a omitir.</param>
+      <param name="count">Número de actividades que se van a recuperar.</param>
+      <param name="includeXaml">True si la definición Xaml para las actividades de flujo de trabajo deberían recuperarse. De lo contrario, false.</param>
+      <param name="metadataFilter">Filtro de metadatos de las actividades que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Get(System.String)">
+      <summary>Recupera la actividad de flujo de trabajo especificada.</summary>
+      <returns>ActivityDescription para la actividad recuperada.</returns>
+      <param name="activityName">Nombre de la actividad que se va a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Publish(Microsoft.Workflow.Client.ActivityDescription)">
+      <summary>Publica una nueva actividad de flujo de trabajo en el ámbito actual o actualiza una actividad de flujo de trabajo existente.</summary>
+      <returns>URI de la actividad publicada/actualizada.</returns>
+      <param name="description">Descripción de la actividad que se está publicando o actualizando</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Publish(Microsoft.Workflow.Client.ActivityDescription,System.Boolean,System.Boolean)">
+      <summary>Publica una nueva actividad de flujo de trabajo en el ámbito actual o actualiza una actividad de flujo de trabajo existente y termina opcionalmente instancias de flujo de trabajo afectadas y sobrescribe el atributo X:classname en xaml.</summary>
+      <returns>URI de la actividad publicada/actualizada.</returns>
+      <param name="description">Descripción de la actividad que se está publicando o actualizando</param>
+      <param name="overwriteXClassName">True si el atributo x:ClassName en xaml debería sobrescribirse por la propiedad Name especificada en ActivityDescription. De lo contrario, false.</param>
+      <param name="terminateDependentInstances">True si todas las instancias existentes de cualquier flujo de trabajo que usa una actividad que se está actualizando deberían terminarse; false si las instancias existentes de los flujos de trabajo afectados deberían continuar la ejecución.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Publish(System.Collections.Generic.IEnumerable{Microsoft.Workflow.Client.ActivityDescription})">
+      <summary>Publica o actualiza una colección de actividades de flujo de trabajo.</summary>
+      <returns>Colección de URI de las actividades publicadas/actualizadas.</returns>
+      <param name="descriptions">Colección de descripciones de las actividades que se están publicando o actualizando</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Publish(System.Collections.Generic.IEnumerable{Microsoft.Workflow.Client.ActivityDescription},System.Boolean)">
+      <summary>Publica o actualiza una colección de actividades de flujo de trabajo y termina opcionalmente las instancias de flujo de trabajo afectadas.</summary>
+      <returns>Colección de URI de las actividades publicadas/actualizadas.</returns>
+      <param name="descriptions">Colección de descripciones de las actividades que se están publicando o actualizando</param>
+      <param name="terminateDependentInstances">True si todas las instancias existentes de cualquier flujo de trabajo que usó una actividad que se está actualizando deberían terminarse; false si las instancias existentes de los flujos de trabajo afectados deberían continuar la ejecución.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Validate(Microsoft.Workflow.Client.ActivityDescription)">
+      <summary>Valida una actividad de flujo de trabajo.</summary>
+      <param name="description">Descripción de la actividad de flujo de trabajo que se va a validar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Validate(Microsoft.Workflow.Client.ActivityDescription,System.Boolean)">
+      <summary>Valida una actividad de flujo de trabajo y usa opcionalmente el nombre de la actividad como el valor del atributo X:classname en xaml.</summary>
+      <param name="description">Descripción de la actividad de flujo de trabajo que se va a validar.</param>
+      <param name="overwriteXClassName">True si el atributo x:ClassName en xaml debería sobrescribirse por la propiedad Name especificada en ActivityDescription. De lo contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityManager.Validate(System.Collections.Generic.IEnumerable{Microsoft.Workflow.Client.ActivityDescription})">
+      <summary>Valida una colección de actividades de flujo de trabajo.</summary>
+      <param name="descriptions">Colección de las descripciones de actividad de flujo de trabajo que se van a validar.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ActivityNotFoundException">
+      <summary>Representa la excepción que se muestra cuando la actividad no existe.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityNotFoundException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityNotFoundException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityNotFoundException" />.</summary>
+      <param name="info">Información de serialización.</param>
+      <param name="context">Contexto de transmisión.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityNotFoundException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityNotFoundException" />.</summary>
+      <param name="message">Mensaje de error.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityNotFoundException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityNotFoundException" />.</summary>
+      <param name="message">Mensaje de error.</param>
+      <param name="inner">Excepción interna.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ActivityValidationException">
+      <summary>Representa los errores durante la validación de la actividad.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityValidationException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityValidationException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityValidationException" />.</summary>
+      <param name="info">Información relativa a la excepción.</param>
+      <param name="context">Contexto.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityValidationException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityValidationException" />.</summary>
+      <param name="message">Mensaje asociado a la excepción.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ActivityValidationException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ActivityValidationException" />.</summary>
+      <param name="message">Mensaje asociado a la excepción.</param>
+      <param name="inner">Excepción interna.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ActivityValidationException.ActivityName">
+      <summary>Obtiene o establece el nombre de la actividad que se está validando.</summary>
+      <returns>Nombre de la actividad que se está validando.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ActivityValidationException.ScopePath">
+      <summary>Obtiene o establece la ruta de acceso del ámbito.</summary>
+      <returns>Ruta de acceso del ámbito.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.AuthenticationException">
+      <summary>Representa la excepción de autenticación.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.AuthenticationException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.AuthenticationException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.AuthenticationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.AuthenticationException" />.</summary>
+      <param name="info">Detalles de serialización.</param>
+      <param name="context">Contexto de transmisión.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.AuthenticationException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.AuthenticationException" />.</summary>
+      <param name="message">Mensaje de excepción.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.AuthenticationException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.AuthenticationException" />.</summary>
+      <param name="message">Mensaje de excepción.</param>
+      <param name="inner">Error.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ClientSettings">
+      <summary>Clase para representar la configuración usada por WorkflowManagementClient</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ClientSettings.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ClientSettings" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ClientSettings.Credentials">
+      <summary>Obtiene o establece las credenciales.</summary>
+      <returns>Icredentials que representa las credenciales usadas por WorkflowManagementClient</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ClientSettings.RequestTimeout">
+      <summary>Obtiene o establece el tiempo de espera de la solicitud usada por WorkflowManagementClient y sus objetos.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ClientSettings.UserCulture">
+      <summary>Obtiene o establece UserCulture.</summary>
+      <returns>Cadena que representa UserCulture</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ClientSettings.UseXmlFormat">
+      <summary>Obtiene o establece el formato usado por WorkflowManagementClient y su objeto.</summary>
+      <returns>True si el formato debe basarse en XML. False si el formato debe basarse en Json.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.HttpWorkflowNotificationPublisher">
+      <summary>Representa el editor de notificación de flujo de trabajo HTTP.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.HttpWorkflowNotificationPublisher.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.HttpWorkflowNotificationPublisher" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.HttpWorkflowNotificationPublisher.OnPublishNotification(System.String,Microsoft.Workflow.Client.WorkflowNotification,System.Net.ICredentials,System.String,System.Guid,System.TimeSpan)">
+      <summary>Provoca el evento PublisherNotification.</summary>
+      <param name="address">Dirección en la que se va a publicar.</param>
+      <param name="notification">Notificación que se va a publicar.</param>
+      <param name="credentials">Credenciales de usuario que se van a usar.</param>
+      <param name="userCulture">Referencia cultural de usuario que se va a usar.</param>
+      <param name="traceActivityId">Identificador de actividad de seguimiento.</param>
+      <param name="requestTimeout">Tiempo de espera de la solicitud.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.InstanceManager">
+      <summary>Permite recuperar y administrar instancias de flujo de trabajo.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Cancel(System.String,System.String,System.String)">
+      <summary>Cancela una instancia de flujo de trabajo especificado.</summary>
+      <returns>Devuelve un objeto de instancia de flujo de trabajo que contiene los detalles sobre la instancia de flujo de trabajo cancelada.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenece la instancia.</param>
+      <param name="instanceName">Nombre de la instancia de flujo de trabajo que se va a cancelar.</param>
+      <param name="reason">Motivo para cancelar esta instancia de flujo de trabajo.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Get">
+      <summary>Recupera información sobre todas las instancias de flujo de trabajo en el ámbito actual.</summary>
+      <returns>Una colección de objetos de <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceInfo" /> que representan las instancias de flujo de trabajo recuperadas.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Get(System.Int32,System.Int32)">
+      <summary>Recupera información sobre instancias de flujo de trabajo en el ámbito actual a través de la paginación.</summary>
+      <returns>Una colección de objetos de <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceInfo" /> que representan las instancias de flujo de trabajo recuperadas.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Get(System.Int32,System.Int32,Microsoft.Activities.WorkflowInstanceStatus,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Recupera a través de la paginación información sobre instancias de flujo de trabajo que cumplen criterios específicos.</summary>
+      <returns>Una colección de objetos de <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceInfo" /> que representan las instancias de flujo de trabajo recuperadas.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="workflowStatus">Estado de las instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="activationMetadataFilter">Colección de metadatos que filtra las instancias de flujo de trabajo que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Get(System.Int32,System.Int32,System.String)">
+      <summary>Recupera a través de la paginación información sobre instancias de flujo de trabajo de un flujo de trabajo específico.</summary>
+      <returns>Una colección de objetos de <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceInfo" /> que representan las instancias de flujo de trabajo recuperadas.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Get(System.Int32,System.Int32,System.String,Microsoft.Activities.WorkflowInstanceStatus)">
+      <summary>Recupera a través de la paginación información sobre instancias de flujo de trabajo de flujo de trabajo especificado en un estado especificado.</summary>
+      <returns>Una colección de objetos de <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceInfo" /> que representan las instancias de flujo de trabajo recuperadas.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+      <param name="workflowStatus">Estado de las instancias de flujo de trabajo que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Get(System.Int32,System.Int32,System.String,Microsoft.Activities.WorkflowInstanceStatus,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Recupera a través de la paginación información sobre instancias de flujo de trabajo que cumplen criterios específicos.</summary>
+      <returns>Una colección de objetos de <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceInfo" /> que representan las instancias de flujo de trabajo recuperadas.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+      <param name="workflowStatus">Estado de las instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="activationMetadataFilter">Colección de metadatos que filtra las instancias de flujo de trabajo que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Get(System.String,System.String)">
+      <summary>Recupera información sobre una instancia de flujo de trabajo específica.</summary>
+      <returns>Una colección de objetos de <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceInfo" /> que representan las instancias de flujo de trabajo recuperadas.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenece la instancia.</param>
+      <param name="instanceName">Nombre de la instancia de flujo de trabajo que se va a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.GetCount">
+      <summary>Recupera el recuento de todas las instancias de flujo de trabajo en el ámbito.</summary>
+      <returns>Número de todas las instancias de flujo de trabajo en el ámbito actual.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.GetCount(Microsoft.Activities.WorkflowInstanceStatus)">
+      <summary>Recupera el recuento de todas las instancias de flujo de trabajo que tienen un estado específico.</summary>
+      <returns>Número de instancias de flujo de trabajo con el estado especificado en el ámbito actual.</returns>
+      <param name="workflowStatus">Estado de las instancias de flujo de trabajo (no confundir con el estado del flujo de trabajo) que se van a incluir en el recuento.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.GetCount(Microsoft.Activities.WorkflowInstanceStatus,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Recupera el recuento de todas las instancias de flujo de trabajo que tienen un estado específico y coinciden con el filtro de metadatos de activación específico.</summary>
+      <returns>Número de instancias de flujo de trabajo con el estado especificado en el filtro de metadatos de activación del ámbito actual.</returns>
+      <param name="workflowStatus">Estado de las instancias de flujo de trabajo (no confundir con el estado del flujo de trabajo) que se van a incluir en el recuento.</param>
+      <param name="activationMetadataFilter">Filtro de metadatos de activación para las instancias de flujo de trabajo que se van a incluir en el recuento.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.GetCount(System.String)">
+      <summary>Recupera el recuento de todas las instancias de flujo de trabajo de un flujo de trabajo específico.</summary>
+      <returns>Número de instancias de flujo de trabajo para este flujo de trabajo.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.GetCount(System.String,Microsoft.Activities.WorkflowInstanceStatus,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Recupera el recuento de todas las instancias de flujo de trabajo de un flujo de trabajo específico que tienen un estado específico y coinciden con el filtro de metadatos de activación específico.</summary>
+      <returns>Número de instancias de flujo de trabajo que coinciden con los criterios especificados.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+      <param name="workflowStatus">Estado de las instancias de flujo de trabajo (no confundir con el estado del flujo de trabajo) que se van a incluir en el recuento.</param>
+      <param name="activationMetadataFilter">Filtro de metadatos de activación para las instancias de flujo de trabajo que se van a incluir en el recuento.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InstanceManager.Terminate(System.String,System.String,System.String)">
+      <summary>Termina la instancia de flujo de trabajo especificada.</summary>
+      <returns>Instancia de flujo de trabajo especificada que se va a terminar.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenece la instancia.</param>
+      <param name="instanceName">Nombre del flujo de trabajo que se va a terminar.</param>
+      <param name="reason">Motivo para terminar la instancia.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.InternalServerException">
+      <summary>Representa los errores encontrados en el servidor interno.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InternalServerException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.InternalServerException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InternalServerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.InternalServerException" />.</summary>
+      <param name="info">Detalles de serialización.</param>
+      <param name="context">Contexto de transmisión.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InternalServerException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.InternalServerException" />.</summary>
+      <param name="message">Mensaje de excepción.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InternalServerException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.InternalServerException" />.</summary>
+      <param name="message">Mensaje de excepción.</param>
+      <param name="inner">Error.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.InvalidRequestException">
+      <summary>Representa un error cuando la solicitud del cliente no es válida.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InvalidRequestException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.InvalidRequestException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InvalidRequestException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.InvalidRequestException" /> con la información y el contexto especificados.</summary>
+      <param name="info">Información relativa a la excepción.</param>
+      <param name="context">Contexto.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InvalidRequestException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.InvalidRequestException" /> con el mensaje de error especificado.</summary>
+      <param name="message">Mensaje de error.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.InvalidRequestException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.InvalidRequestException" /> con mensaje de error y excepción interna especificados.</summary>
+      <param name="message">Mensaje de error.</param>
+      <param name="inner">Excepción interna.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.NamedScopedSecurityConfigurationCollection">
+      <summary>Representa una colección de configuración de seguridad con ámbito nombrada.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.NamedScopedSecurityConfigurationCollection.Contains(System.Type)">
+      <summary>Determina si un elemento está en la colección.</summary>
+      <returns>true si el elemento está en la colección; en caso contrario, false.</returns>
+      <param name="type">Tipo de elemento de la colección.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.NamedScopedSecurityConfigurationCollection.GetKeyForItem(Microsoft.Workflow.Client.Security.ScopeSecurityConfiguration)">
+      <summary>Obtiene la clave especificada del elemento de la colección.</summary>
+      <returns>Clave especificada del elemento de la colección.</returns>
+      <param name="item">El elemento.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.NamedScopedSecurityConfigurationCollection.Item(System.Type)">
+      <summary>Obtiene el elemento de la colección.</summary>
+      <returns>Elemento de la colección.</returns>
+      <param name="type">Tipo de elemento de la colección.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.NamedScopedSecurityConfigurationCollection.Remove(System.Type)">
+      <summary>Indica si se ha quitado la primera aparición de un objeto específico de la colección.</summary>
+      <returns>true si se ha quitado correctamente el elemento; en caso contrario, false.</returns>
+      <param name="type">Tipo de elemento de la colección.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.PublisherErrorEventArgs">
+      <summary>Proporciona datos para el evento de error del editor.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.PublisherErrorEventArgs.#ctor(System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.PublisherErrorEventArgs" />.</summary>
+      <param name="error">Excepción del error.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.PublisherErrorEventArgs.Error">
+      <summary>Obtiene o establece la excepción para mostrar cuando se producen errores en el evento.</summary>
+      <returns>Excepción para mostrar cuando se producen errores en el evento.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.PublishNotificationCompleteEventArgs">
+      <summary>Representa la notificación que se va a publicar cuando se complete el argumento del evento.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.PublishNotificationCompleteEventArgs.#ctor(System.String,Microsoft.Workflow.Client.WorkflowNotification)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.PublishNotificationCompleteEventArgs" />.</summary>
+      <param name="address">Dirección de publicación.</param>
+      <param name="notification">La <see cref="T:Microsoft.Workflow.Client.WorkflowNotification" />.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.PublishNotificationCompleteEventArgs.Address">
+      <summary>Obtiene la dirección de publicación.</summary>
+      <returns>Dirección de publicación.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.PublishNotificationCompleteEventArgs.Notification">
+      <summary>Obtiene la <see cref="T:Microsoft.Workflow.Client.WorkflowNotification" />.</summary>
+      <returns>La <see cref="T:Microsoft.Workflow.Client.WorkflowNotification" />.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.PublishNotificationErrorEventArgs">
+      <summary>Proporciona datos para el evento de error de notificación de publicación.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.PublishNotificationErrorEventArgs.#ctor(System.String,Microsoft.Workflow.Client.WorkflowNotification,System.Exception,System.Boolean)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.PublishNotificationErrorEventArgs" />.</summary>
+      <param name="address">Dirección en que se publicará la notificación.</param>
+      <param name="notification">Notificación que se va a publicar.</param>
+      <param name="error">Error que causó la excepción.</param>
+      <param name="willBeRetried">true para retirar la notificación de publicación; en caso contrario, false.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.PublishNotificationErrorEventArgs.Address">
+      <summary>Obtiene o establece la dirección en la que se va a publicar.</summary>
+      <returns>Dirección en la que se va a publicar.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.PublishNotificationErrorEventArgs.Error">
+      <summary>Obtiene o establece el error que causó la excepción.</summary>
+      <returns>Error que causó la excepción.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.PublishNotificationErrorEventArgs.Notification">
+      <summary>Obtiene o establece la notificación que se va a publicar.</summary>
+      <returns>Notificación que se va a publicar.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.PublishNotificationErrorEventArgs.WillBeRetried">
+      <summary>Obtiene o establece un valor que indica si la notificación de publicación se va a retirar.</summary>
+      <returns>true si la notificación de publicación puede retirarse; en caso contrario, false.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.PublishWorkflowNotificationResult">
+      <summary>Enumera los resultados de notificación del flujo de trabajo publicado.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.PublishWorkflowNotificationResult.Success">
+      <summary>El resultado es correcto.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.PublishWorkflowNotificationResult.QuotaExceeded">
+      <summary>El resultado excede la cuota.</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.QuotaExceededException">
+      <summary>Excepción que se muestra cuando se supera la cuota del flujo de trabajo.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.QuotaExceededException.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.QuotaExceededException" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.QuotaExceededException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.QuotaExceededException" /> con datos serializados.</summary>
+      <param name="info">Objeto que contiene la información serializada sobre la excepción.</param>
+      <param name="context">Información contextual acerca del origen o del destino.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.QuotaExceededException.#ctor(System.String)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.QuotaExceededException" /> con un mensaje de error.</summary>
+      <param name="message">Mensaje de error de la excepción.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.QuotaExceededException.#ctor(System.String,System.Exception)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.QuotaExceededException" /> con mensaje de error y excepción interna.</summary>
+      <param name="message">Mensaje de error de la excepción.</param>
+      <param name="inner">Excepción interna que es la causa de la excepción actual.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ScopeDescription">
+      <summary>Descripción de un ámbito.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeDescription.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeDescription" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.ActivityCount">
+      <summary>Obtiene el número de actividades en este ámbito.</summary>
+      <returns>Número de actividades en este ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.ChildScopeCount">
+      <summary>Obtiene el número de ámbitos secundarios.</summary>
+      <returns>Número de ámbitos secundarios.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.DefaultWorkflowConfiguration">
+      <summary>Obtiene o establece la configuración de flujo de trabajo predeterminada para todos los flujos de trabajo de este ámbito.</summary>
+      <returns>WorkflowConfiguration que es la configuración predeterminada para todos los flujos de trabajo de este ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.Description">
+      <summary>OBSOLETO</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.DisplayName">
+      <summary>Nombre para mostrar de este ámbito.</summary>
+      <returns>Nombre para mostrar de este ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.LastModified">
+      <summary>Obtiene la última vez que este ámbito se modificó.</summary>
+      <returns>Valor DataTime basado en UTC cuando este ámbito se modificó por última vez.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.LastRevised">
+      <summary>Obtiene la última vez que este ámbito se revisó.</summary>
+      <returns>Valor DataTime basado en UTC cuando este ámbito se revisó por última vez.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.Path">
+      <summary>Obtiene la ruta de acceso a este ámbito desde el ámbito raíz lógico.</summary>
+      <returns>Cadena que representa la parte de este ámbito desde el ámbito raíz lógico.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.RevisionNumber">
+      <summary>Obtiene el número de revisión de este ámbito.</summary>
+      <returns>Longitud que representa el número de revisión de este ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.SecurityConfigurations">
+      <summary>Obtiene la configuración de seguridad de este ámbito.</summary>
+      <returns>Colección de la configuración de seguridad de este ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.Status">
+      <summary>Obtiene o establece el estado de este ámbito.</summary>
+      <returns>Valor de la enumeración de ScopeStatus que representa el estado de este ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.UserComments">
+      <summary>Obtiene o establece los comentarios del usuario para este ámbito.</summary>
+      <returns>Cadena que representa los comentarios del usuario para este ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeDescription.WorkflowCount">
+      <summary>Obtiene el número de flujos de trabajo en este ámbito.</summary>
+      <returns>Número de flujos de trabajo en este ámbito.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ScopeInactiveException">
+      <summary>Excepción que se muestra cuando el ámbito no está activo.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeInactiveException.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeInactiveException" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeInactiveException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeInactiveException" /> con datos serializados.</summary>
+      <param name="info">Objeto que contiene la información serializada sobre la excepción.</param>
+      <param name="context">Información contextual acerca del origen o del destino.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeInactiveException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeInactiveException" /> con un mensaje de error.</summary>
+      <param name="message">Mensaje que describe el error.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeInactiveException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeInactiveException" /> con mensaje de error y excepción interna.</summary>
+      <param name="message">Mensaje que describe el error.</param>
+      <param name="inner">Excepción interna que es la causa de la excepción actual.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeInactiveException.ScopePath">
+      <summary>Obtiene o establece la ruta de acceso del ámbito.</summary>
+      <returns>Ruta de acceso del ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeInactiveException.ScopeStatus">
+      <summary>Obtiene o establece el estado del ámbito.</summary>
+      <returns>Estado del ámbito.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ScopeInfo">
+      <summary>OBSOLETO</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeInfo.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeInfo" />.</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ScopeManager">
+      <summary>Permite la administración del ámbito y de los ámbitos secundarios actuales.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.Delete">
+      <summary>Elimina TODOS los ámbitos secundarios.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.Get">
+      <summary>Recupera la descripción de ámbito del ámbito actual.</summary>
+      <returns>Valor de ScopeDescription que describe el ámbito actual.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.GetChildScopes">
+      <summary>Recupera todos los ámbitos secundarios.</summary>
+      <returns>Colección de ScopeDescriptions para todos los ámbitos secundarios.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.GetChildScopes(System.Int32,System.Int32)">
+      <summary>Recupera el subconjunto de ámbitos secundarios especificado.</summary>
+      <returns>Colección de ScopeDescriptions para los ámbitos secundarios recuperados.</returns>
+      <param name="skip">Número de ámbitos que se van a omitir.</param>
+      <param name="count">Número de ámbitos que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.GetChildScopes(System.Int32,System.Int32,Microsoft.Workflow.Client.ScopeStatus)">
+      <summary>Recupera el subconjunto de ámbitos secundarios especificado que están en estado especificado.</summary>
+      <returns>Colección de ScopeDescriptions para los ámbitos secundarios recuperados.</returns>
+      <param name="skip">Número de ámbitos que se van a omitir.</param>
+      <param name="count">Número de ámbitos que se van a recuperar.</param>
+      <param name="status">Especifica el estado de ámbitos que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.Publish(Microsoft.Workflow.Client.ScopeDescription)">
+      <summary>Publica (actualiza) el ámbito actual.</summary>
+      <param name="description">ScopeDescription actualizada.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.PublishChildScope(System.String,Microsoft.Workflow.Client.ScopeDescription)">
+      <summary>Publica un ámbito secundario.</summary>
+      <returns>Cliente para interactuar con el ámbito secundario.</returns>
+      <param name="name">Nombre del ámbito secundario.</param>
+      <param name="description">ScopeDescription para el ámbito secundario.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.Resume">
+      <summary>Reanuda un ámbito previamente suspendido.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeManager.Suspend">
+      <summary>Suspende un ámbito.</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ScopeNotFoundException">
+      <summary>Representa la excepción que se muestra cuando el nombre del ámbito no existe.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeNotFoundException.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeNotFoundException" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeNotFoundException" /> con datos serializados.</summary>
+      <param name="info">Objeto que contiene la información serializada sobre la excepción.</param>
+      <param name="context">Información contextual acerca del origen o del destino.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeNotFoundException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeNotFoundException" /> con un mensaje de error.</summary>
+      <param name="message">Mensaje de error que describe la excepción.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeNotFoundException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeNotFoundException" /> con mensaje de error y excepción interna.</summary>
+      <param name="message">Mensaje de error que describe la excepción.</param>
+      <param name="inner">Excepción interna que es la causa de la excepción actual.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ScopeRevisionMismatchException">
+      <summary>Representa la excepción que se muestra cuando la revisión del ámbito no es igual.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeRevisionMismatchException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeRevisionMismatchException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeRevisionMismatchException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeRevisionMismatchException" />.</summary>
+      <param name="info">Información de serialización.</param>
+      <param name="context">Contexto de transmisión.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeRevisionMismatchException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeRevisionMismatchException" />.</summary>
+      <param name="message">Mensaje de error.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ScopeRevisionMismatchException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ScopeRevisionMismatchException" />.</summary>
+      <param name="message">Mensaje de error.</param>
+      <param name="inner">Excepción interna.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeRevisionMismatchException.LastRevised">
+      <summary>Obtiene el valor de <see cref="T:System.DateTime" /> que representa la última revisión del ámbito.</summary>
+      <returns>Valor de <see cref="T:System.DateTime" /> que representa la última revisión del ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeRevisionMismatchException.ScopePath">
+      <summary>Obtiene la ruta de acceso del ámbito.</summary>
+      <returns>Ruta de acceso del ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ScopeRevisionMismatchException.ScopeRevision">
+      <summary>Obtiene la revisión del ámbito del cliente.</summary>
+      <returns>Revisión del ámbito del cliente.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ScopeStatus">
+      <summary>Enumeración que representa un estado de un ámbito.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.ScopeStatus.Unknown">
+      <summary>El ámbito está en estado desconocido.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.ScopeStatus.Resuming">
+      <summary>El ámbito está reanudándose tras ser suspendido.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.ScopeStatus.Active">
+      <summary>El ámbito está activo.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.ScopeStatus.Suspending">
+      <summary>El ámbito se está suspendiendo.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.ScopeStatus.Suspended">
+      <summary>El ámbito está suspendido.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.ScopeStatus.Unregistering">
+      <summary>El ámbito se está eliminando.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.ScopeStatus.Unregistered">
+      <summary>El ámbito está eliminado y está esperando para ser purgado.</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ServiceReadOnlyException">
+      <summary>Representa una excepción de solo lectura de servicio.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ServiceReadOnlyException.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ServiceReadOnlyException" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ServiceReadOnlyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ServiceReadOnlyException" /> con datos serializados.</summary>
+      <param name="info">Objeto que contiene la información serializada sobre la excepción.</param>
+      <param name="context">Información contextual acerca del origen o del destino.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ServiceReadOnlyException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ServiceReadOnlyException" /> con un mensaje de error.</summary>
+      <param name="message">Mensaje de error que describe la excepción.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ServiceReadOnlyException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ServiceReadOnlyException" /> con mensaje de error y excepción interna.</summary>
+      <param name="message">Mensaje de error que describe la excepción.</param>
+      <param name="inner">Excepción interna que es la causa de la excepción actual.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.ServiceVersionMismatchException">
+      <summary>Representa la excepción que se muestra cuando las versiones de servicio no son iguales.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ServiceVersionMismatchException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ServiceVersionMismatchException" />.</summary>
+      <param name="info">Información de serialización.</param>
+      <param name="context">Contexto de transmisión.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ServiceVersionMismatchException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ServiceVersionMismatchException" />.</summary>
+      <param name="message">Mensaje de error.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.ServiceVersionMismatchException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.ServiceVersionMismatchException" />.</summary>
+      <param name="message">Mensaje de error.</param>
+      <param name="inner">Excepción interna.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ServiceVersionMismatchException.ActualVersion">
+      <summary>Obtiene o establece la versión de servicio real.</summary>
+      <returns>Versión de servicio real.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.ServiceVersionMismatchException.ExpectedVersion">
+      <summary>Obtiene o establece la versión de servicio prevista.</summary>
+      <returns>Versión de servicio prevista.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.SubscriptionActivationDescription">
+      <summary>Descripción de activación para flujos de trabajo activados con el mecanismo de publicación-suscripción.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.SubscriptionActivationDescription.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.SubscriptionActivationDescription" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.SubscriptionActivationDescription.CorrelationProperties">
+      <summary>Obtiene las propiedades de correlación.</summary>
+      <returns>Colección de pares nombre-valor que representan las propiedades de correlación.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.SubscriptionActivationDescription.Filter">
+      <summary>Obtiene o establece el filtro de suscripción.</summary>
+      <returns>Valor de SubscriptionFilter que define el filtro de activación.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.SubscriptionActivationParameters">
+      <summary>Parámetros de activación para flujos de trabajo activados con el mecanismo de publicación-suscripción.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.SubscriptionActivationParameters.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.SubscriptionActivationParameters" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.SubscriptionActivationParameters.CorrelationProperties">
+      <summary>Obtiene las propiedades de correlación.</summary>
+      <returns>Colección de pares nombre-valor que representan las propiedades de correlación.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowActivationDescription">
+      <summary>Representa la clase base para especificar cómo se pueden activar las instancias de este flujo de trabajo.</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowActivationParameters">
+      <summary>Clase base para los parámetros de activación de flujo de trabajo</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowActivationParameters.Metadata">
+      <summary>Obtiene metadatos de activación de flujo de trabajo</summary>
+      <returns>Colección de pares nombre-valor que representan los metadatos de activación.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowConfiguration">
+      <summary>Configuración de un flujo de trabajo en Windows Azure Workflow</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowConfiguration.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowConfiguration" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowConfiguration.AppSettings">
+      <summary>Configuración disponible para el flujo de trabajo</summary>
+      <returns>Colección de pares nombre-valor</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowConfiguration.MaxNewInstancesPerHour">
+      <summary>Limitación de activación</summary>
+      <returns>Entero que acepta valores NULL y que representa un número máximo de instancias nuevas de este flujo de trabajo que se puede activar por hora.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowConfiguration.WorkflowActivationThrottleThreshold">
+      <summary>OBSOLETO</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowConfiguration.WorkflowActivationThrottleTimeWindowInMinutes">
+      <summary>OBSOLETO</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowDescription">
+      <summary>Representa un flujo de trabajo como un recurso que se puede publicar o recuperar de Windows Azure Workflow</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowDescription.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowDescription" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.ActivationDescription">
+      <summary>Especifica cómo se pueden activar las instancias de este flujo de trabajo</summary>
+      <returns>Clase base para especificar cómo se pueden activar las instancias de este flujo de trabajo</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.ActivationFilter">
+      <summary>OBSOLETO</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.ActivityPath">
+      <summary>Obtiene o establece la ruta de acceso a la actividad del flujo de trabajo.</summary>
+      <returns>Cadena que representa la ruta de acceso a la actividad del flujo de trabajo.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.Configuration">
+      <summary>Obtiene o establece WorkflowConfiguration.</summary>
+      <returns>WorkflowConfiguration para este flujo de trabajo</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.ExternalVariables">
+      <summary>Obtiene la colección de variables externas.</summary>
+      <returns>Colección de variables externas</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.ExternalVariableXaml">
+      <summary>OBSOLETO</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.LastModified">
+      <summary>Obtiene la hora UTC de LastModified del flujo de trabajo.</summary>
+      <returns>UTC DateTime</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.Metadata">
+      <summary>Obtiene la colección de metadatos para este flujo de trabajo.</summary>
+      <returns>IDictionary de pares clave-valor que representa los metadatos para este flujo de trabajo</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowDescription.Name">
+      <summary>Obtiene o establece el nombre de este flujo de trabajo.</summary>
+      <returns>Cadena que representa el nombre de este flujo de trabajo.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowInstanceInfo">
+      <summary>Representa la información sobre una instancia de flujo de trabajo.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceInfo.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceInfo" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.ActivationParameters">
+      <summary>Obtiene o establece ActivationParameters para esta instancia de flujo de trabajo.</summary>
+      <returns>Colección de parámetros de activación del flujo de trabajo</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.CreationTime">
+      <summary>Valor de DateTime cuando se creó la instancia</summary>
+      <returns>UTC DateTime</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.InstanceCreated">
+      <summary>OBSOLETO</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.InstanceName">
+      <summary>Nombre de la instancia</summary>
+      <returns>cadena (normalmente, GUID representado como cadena)</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.InstanceVariables">
+      <summary>Colección de variables para la instancia de flujo de trabajo en curso</summary>
+      <returns>Colección basada en IDictionary</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.LastModified">
+      <summary>Valor de DateTime cuando la instancia se modificó por última vez</summary>
+      <returns>UTC DateTime</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.MappedVariables">
+      <summary>Colección de variables asignadas para la instancia de flujo de trabajo en curso</summary>
+      <returns>Colección basada en IDictionary</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.ScopePath">
+      <summary>Obtiene la ruta de acceso del ámbito para el ámbito que contiene el flujo de trabajo.</summary>
+      <returns>Parte de la ruta de acceso del URI del ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.UserStatus">
+      <summary>Obtiene el UserStatus establecido por la instancia de flujo de trabajo.</summary>
+      <returns>Cadena establecida como UserStatus por la instancia de flujo de trabajo</returns>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.WorkflowInstanceInfo.UserStatusVariable">
+      <summary>Una constante que representa el XName para una variable de UserStatus conocida.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.WorkflowName">
+      <summary>Obtiene el nombre del flujo de trabajo.</summary>
+      <returns>Nombre del flujo de trabajo</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.WorkflowStatus">
+      <summary>Obtiene el WorkflowStatus</summary>
+      <returns>Estado del flujo de trabajo.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowInstanceInfo.WorkflowStatusDetails">
+      <summary>Obtiene WorkflowStatusDetails.</summary>
+      <returns>Estado del flujo de trabajo detallado</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowInstanceManager">
+      <summary>Administra la recuperación, iniciando y deteniendo las instancias del flujo de trabajo.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.#ctor(System.Uri)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceManager" />.</summary>
+      <param name="baseUri">URI base del nodo actual.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.#ctor(System.Uri,Microsoft.Workflow.Client.ClientSettings)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceManager" />.</summary>
+      <param name="baseUri">URI base del nodo actual.</param>
+      <param name="settings">Configuración del administrador.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.#ctor(System.Uri,Microsoft.Workflow.Client.ClientSettings,Microsoft.Workflow.Client.WorkflowNotificationPublisher)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceManager" />.</summary>
+      <param name="baseUri">URI base del nodo actual.</param>
+      <param name="settings">Configuración del administrador.</param>
+      <param name="publisher">Editor.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.CancelInstance(System.String,System.String,System.String)">
+      <summary>Cancela la instancia de flujo de trabajo especificada.</summary>
+      <returns>El resultado de la instancia del flujo de trabajo de esta operación.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenece la instancia.</param>
+      <param name="instanceName">Nombre de la instancia de flujo de trabajo que se va a cancelar.</param>
+      <param name="reason">Motivo de la cancelación de la instancia.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstance(System.String,System.String)">
+      <summary>Recupera información sobre una instancia de flujo de trabajo específica.</summary>
+      <returns>El administrador de la instancia del flujo de trabajo de las instancias recuperadas.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenece la instancia.</param>
+      <param name="instanceName">Nombre de la instancia de flujo de trabajo que se va a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstanceCount">
+      <summary>Recupera el número de todas las instancias de flujo de trabajo en el ámbito.</summary>
+      <returns>El número de todas las instancias de flujo de trabajo en el ámbito.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstanceCount(Microsoft.Activities.WorkflowInstanceStatus,System.String[])">
+      <summary>Recupera el número de todas las instancias de flujo de trabajo que tienen un estado específico.</summary>
+      <returns>Recuento de instancias.</returns>
+      <param name="workflowStatus">Estado de las instancias del flujo de trabajo que se van a incluir en el recuento.</param>
+      <param name="activationMetadataFilter">Filtro de metadatos de activación para las instancias de flujo de trabajo que se van a incluir en el recuento.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstanceCount(System.String)">
+      <summary>Recupera el número de instancias de flujo de trabajo con el nombre del flujo de trabajo especificado.</summary>
+      <returns>Recuento de instancia con el nombre del flujo de trabajo especificado.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstanceCount(System.String,Microsoft.Activities.WorkflowInstanceStatus,System.String[])">
+      <summary>Recupera el número de todas las instancias de flujo de trabajo de un flujo de trabajo específico que tienen un estado específico y coinciden con el filtro de metadatos de activación específico.</summary>
+      <returns>Recuento de instancias con el nombre de flujo de trabajo especificado, estado y filtro de metadatos de activación.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+      <param name="workflowStatus">Estado de las instancias del flujo de trabajo que se van a incluir en el recuento.</param>
+      <param name="activationMetadataFilter">Filtro de metadatos de activación para las instancias de flujo de trabajo que se van a incluir en el recuento.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstances">
+      <summary>Devuelve toda la colección de instancias de flujo de trabajo.</summary>
+      <returns>Colección de instancias de flujo de trabajo.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstances(System.Int32,System.Int32)">
+      <summary>Devuelve la colección de instancias del flujo de trabajo con el número especificado que se va omitir y el recuento que se va a recuperar.</summary>
+      <returns>Colección de instancias de flujo de trabajo.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstances(System.Int32,System.Int32,Microsoft.Activities.WorkflowInstanceStatus,System.String[])">
+      <summary>Devuelve la colección de instancias del flujo de trabajo con el valor especificado que se va a omitir, el estado del flujo de trabajo y el filtro de metadatos de activación.</summary>
+      <returns>Colección de instancias de flujo de trabajo.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="workflowStatus">Estado de las instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="activationMetadataFilter">Colección de metadatos que filtra las instancias de flujo de trabajo que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstances(System.Int32,System.Int32,System.String)">
+      <summary>Devuelve la colección de instancias del flujo de trabajo con el valor especificado que se va a omitir, el recuento y el nombre del flujo de trabajo.</summary>
+      <returns>Colección de instancias de flujo de trabajo.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.GetInstances(System.Int32,System.Int32,System.String,Microsoft.Activities.WorkflowInstanceStatus,System.String[])">
+      <summary>Devuelve la colección de instancias del flujo de trabajo con el valor especificado que se va a omitir, el estado del flujo de trabajo, nombre del flujo de trabajo y el filtro de metadatos de activación.</summary>
+      <returns>Colección de instancias de flujo de trabajo.</returns>
+      <param name="skip">Número de instancias de flujo de trabajo que se van a omitir.</param>
+      <param name="count">Número de instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenecen las instancias.</param>
+      <param name="workflowStatus">Estado de las instancias de flujo de trabajo que se van a recuperar.</param>
+      <param name="activationMetadataFilter">Colección de metadatos que filtra las instancias de flujo de trabajo que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.PublishNotification(Microsoft.Workflow.Client.WorkflowNotification,System.Nullable{System.Int64},System.String[])">
+      <summary>Publica un evento asincrónico mediante un contexto de solicitud de sistema con el <see cref="T:Microsoft.Workflow.Client.WorkflowNotification" /> especificado.</summary>
+      <returns>Evento asincrónico mediante un contexto de solicitud de sistema con el <see cref="T:Microsoft.Workflow.Client.WorkflowNotification" /> especificado.</returns>
+      <param name="notification">Notificación que se va a publicar.</param>
+      <param name="expectedScopeRevision">Revisión del ámbito previsto.</param>
+      <param name="activationMetadata">Metadatos de activación.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.PublishNotification(Microsoft.Workflow.Client.WorkflowNotification,System.String[])">
+      <summary>Publica un evento asincrónico mediante un contexto de solicitud de sistema con el <see cref="T:Microsoft.Workflow.Client.WorkflowNotification" /> y los metadatos de activación especificados.</summary>
+      <returns>Evento asincrónico mediante un contexto de solicitud de sistema con el <see cref="T:Microsoft.Workflow.Client.WorkflowNotification" /> y los metadatos de activación especificados.</returns>
+      <param name="notification">Notificación que se va a publicar.</param>
+      <param name="activationMetadata">Metadatos de activación.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.StartWorkflow(System.String,Microsoft.Workflow.Client.WorkflowStartParameters,System.String[])">
+      <summary>Inicia la instancia de flujo de trabajo especificada.</summary>
+      <returns>El resultado de la instancia del flujo de trabajo de esta operación.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenece la instancia.</param>
+      <param name="startInfo">Información de <see cref="T:Microsoft.Workflow.Client.WorkflowStartParameters" />.</param>
+      <param name="activationMetadata">Filtro de metadatos de activación de la instancia del flujo de trabajo.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceManager.TerminateInstance(System.String,System.String,System.String)">
+      <summary>Termina la instancia de flujo de trabajo especificada.</summary>
+      <returns>El resultado de la instancia del flujo de trabajo de esta operación.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo al que pertenece la instancia.</param>
+      <param name="instanceName">Nombre de la instancia del flujo de trabajo que se va a terminar.</param>
+      <param name="reason">Motivo de la terminación de la instancia.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException">
+      <summary>Representa un error cuando la instancia del flujo de trabajo no se encuentra.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException" /> con la información y el contexto especificados.</summary>
+      <param name="info">Información relativa al error.</param>
+      <param name="context">Contexto.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException" /> con el mensaje de error especificado.</summary>
+      <param name="message">Mensaje de error.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowInstanceNotFoundException" /> con mensaje de error y excepción interna especificados.</summary>
+      <param name="message">Mensaje de error.</param>
+      <param name="inner">Excepción interna.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowManagementClient">
+      <summary>Representa un cliente para interactuar con el API de administración de Windows Azure Workflow.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementClient.#ctor(System.Uri)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowManagementClient" /> con el URI del ámbito.</summary>
+      <param name="scopeUri">URI del servidor (nombre de dominio completo) para el ámbito raíz o URI del ámbito completo con la ruta de acceso a ámbito para tener acceso a un ámbito específico.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementClient.#ctor(System.Uri,Microsoft.Workflow.Client.ClientSettings)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowManagementClient" /> con el URI y la configuración del ámbito.</summary>
+      <param name="scopeUri">URI del servidor (nombre de dominio completo) para el ámbito raíz o URI del ámbito completo con la ruta de acceso a ámbito para tener acceso a un ámbito específico.</param>
+      <param name="settings">Parámetros para configurar el comportamiento del cliente.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementClient.#ctor(System.Uri,Microsoft.Workflow.Client.ClientSettings,Microsoft.Workflow.Client.WorkflowNotificationPublisher)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowManagementClient" /> con el URI y la configuración del ámbito, y el editor de notificación.</summary>
+      <param name="scopeUri">URI del servidor (nombre de dominio completo) para el ámbito raíz o URI del ámbito completo con la ruta de acceso a ámbito para tener acceso a un ámbito específico.</param>
+      <param name="settings">Parámetros para configurar el comportamiento del cliente.</param>
+      <param name="publisher">Instancia de <see cref="T:Microsoft.Workflow.Client.WorkflowNotificationPublisher" /> usada al publicar una notificación del cliente a la instalación de destino de Windows Azure Workflow.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowManagementClient.Activities">
+      <summary>Obtiene un administrador para administrar la colección de actividades en el ámbito actual.</summary>
+      <returns>Administrador para administrar la colección de actividades en el ámbito actual.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementClient.CreateClient(System.String)">
+      <summary>Crea una instancia de <see cref="T:Microsoft.Workflow.Client.WorkflowManagementClient" /> para el ámbito del cliente específico con la misma <see cref="T:Microsoft.Workflow.Client.ClientSettings" />.</summary>
+      <returns>Instancia de <see cref="T:Microsoft.Workflow.Client.WorkflowManagementClient" /> que está destinada al ámbito específico.</returns>
+      <param name="childScopeName">Nombre del ámbito secundario.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowManagementClient.CurrentScope">
+      <summary>Obtiene un administrador para administrar el ámbito actual y la colección de ámbitos.</summary>
+      <returns>Administrador para administrar el ámbito actual y la colección de ámbitos.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowManagementClient.Instances">
+      <summary>Obtiene un administrador para administrar la colección de instancias de flujo de trabajo en el ámbito actual.</summary>
+      <returns>Administrador para administrar la colección de instancias de flujo de trabajo en el ámbito actual.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementClient.PublishNotification(Microsoft.Workflow.Client.WorkflowNotification)">
+      <summary>Publica una notificación en el ámbito actual.</summary>
+      <returns>Resultado de notificación del flujo de trabajo publicado.</returns>
+      <param name="notification">Notificación publicada.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementClient.PublishNotification(Microsoft.Workflow.Client.WorkflowNotification,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Publica una notificación en el ámbito actual.</summary>
+      <returns>Resultado de notificación del flujo de trabajo publicado.</returns>
+      <param name="notification">Notificación publicada.</param>
+      <param name="activationMetadata">Metadatos especificados por el usuario usados para etiquetar las instancias de flujo de trabajo activadas por esta notificación.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementClient.PublishNotification(Microsoft.Workflow.Client.WorkflowNotification,System.Collections.Generic.IDictionary{System.String,System.String},System.Int64)">
+      <summary>Publica una notificación en el ámbito actual.</summary>
+      <returns>Resultado de notificación del flujo de trabajo publicado.</returns>
+      <param name="notification">Notificación publicada.</param>
+      <param name="activationMetadata">Metadatos especificados por el usuario usados para etiquetar las instancias de flujo de trabajo activadas por esta notificación.</param>
+      <param name="expectedScopeRevision">Revisión del ámbito previsto.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowManagementClient.ScopeRevision">
+      <summary>Obtiene o establece una revisión de versión del ámbito.</summary>
+      <returns>Revisión de versión del ámbito, o null si no se define la versión.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowManagementClient.ScopeUri">
+      <summary>Obtiene o establece el URI del ámbito al que está destinada esta instancia del cliente actualmente.</summary>
+      <returns>URI del servidor (nombre de dominio completo) para el ámbito raíz o URI del ámbito completo con la ruta de acceso a ámbito para tener acceso a un ámbito específico.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowManagementClient.Settings">
+      <summary>Obtiene o establece la configuración del cliente.</summary>
+      <returns>Configuración del cliente.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowManagementClient.Workflows">
+      <summary>Obtiene un administrador para administrar la colección de flujos de trabajo en el ámbito actual.</summary>
+      <returns>Administrador para administrar la colección de flujos de trabajo en el ámbito actual.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowManagementException">
+      <summary>Representa los errores que la administración de flujos de trabajo encuentra.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowManagementException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowManagementException" />.</summary>
+      <param name="info">Detalles de serialización.</param>
+      <param name="context">Contexto de transmisión.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowManagementException" />.</summary>
+      <param name="message">Mensaje de excepción.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManagementException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowManagementException" />.</summary>
+      <param name="message">Mensaje de excepción.</param>
+      <param name="inner">Error.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowManager">
+      <summary>Permite administrar flujos de trabajo e iniciarlos.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Delete">
+      <summary>Elimina todos los flujos de trabajo en el ámbito actual sin terminar las instancias existentes.</summary>
+      <returns>Número de flujos de trabajo eliminados.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Delete(System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Elimina todos los flujos de trabajo en un ámbito con metadataFilter coincidente sin terminar las instancias existentes. </summary>
+      <returns>Número de flujos de trabajo eliminados.</returns>
+      <param name="metadataFilter">Colección de metaDataFilters que especifica los criterios para que se eliminen flujos de trabajo.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Delete(System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)">
+      <summary>Elimina todos los flujos de trabajo en un ámbito con metadataFilter coincidente.</summary>
+      <returns>Número de flujos de trabajo eliminados.</returns>
+      <param name="metadataFilter">Colección de metaDataFilters que especifica los criterios para que se eliminen flujos de trabajo.</param>
+      <param name="terminateActiveInstances">true si todas las instancias existentes de flujos de trabajo eliminados deberían terminarse; false si las instancias existentes de flujos de trabajo eliminados deberían continuar la ejecución.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Delete(System.String)">
+      <summary>Elimina el flujo de trabajo especificado sin terminar las instancias existentes.</summary>
+      <param name="workflowName">Nombre del flujo de trabajo que se va a eliminar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Delete(System.String,System.Boolean)">
+      <summary>Elimina el flujo de trabajo especificado.</summary>
+      <param name="workflowName">Nombre del flujo de trabajo que se va a eliminar.</param>
+      <param name="terminateActiveInstances">true si todas las instancias existentes de flujos de trabajo eliminados deberían terminarse; false si las instancias existentes de flujos de trabajo eliminados deberían continuar la ejecución.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Get(System.Int32,System.Int32)">
+      <summary>Recupera una colección de WorkflowDescriptions para flujos de trabajo en el ámbito actual a través de la paginación.</summary>
+      <returns>Colección de WorkflowDescriptions recuperados.</returns>
+      <param name="skip">Número de flujos de trabajo que se van a omitir.</param>
+      <param name="count">Número de flujos de trabajo que se van a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Get(System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Recupera a través de la paginación una colección de WorkflowDescriptions para flujos de trabajo que coinciden con el valor de metaDataFilter especificado.</summary>
+      <returns>Colección de WorkflowDescriptions recuperados.</returns>
+      <param name="skip">Número de flujos de trabajo que se van a omitir.</param>
+      <param name="count">Número de flujos de trabajo que se van a recuperar.</param>
+      <param name="metadataFilter">Colección de metaDataFilters que especifica los criterios para que se recuperen flujos de trabajo.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Get(System.String)">
+      <summary>Recupera el valor de WorkflowDescription especificado.</summary>
+      <returns>WorkflowDescription que representa el flujo de trabajo recuperado.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo que se va a recuperar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Publish(Microsoft.Workflow.Client.WorkflowDescription)">
+      <summary>Publica un flujo de trabajo en el ámbito actual.</summary>
+      <returns>URI del flujo de trabajo publicado</returns>
+      <param name="description">Descripción del flujo de trabajo que se va a publicar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Publish(Microsoft.Workflow.Client.WorkflowDescription,System.Boolean)">
+      <summary>Publica un flujo de trabajo en el ámbito actual.</summary>
+      <returns>URI del flujo de trabajo publicado</returns>
+      <param name="description">Descripción del flujo de trabajo que se va a publicar.</param>
+      <param name="terminateActiveInstances">true si todas las instancias existentes del flujo de trabajo publicado (actualizado) deberían terminarse; false si las instancias existentes de este flujo de trabajo deberían continuar la ejecución.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Start(System.String)">
+      <summary>Inicia una nueva instancia de un flujo de trabajo especificado.</summary>
+      <returns>Id. de la instancia de flujo de trabajo iniciada.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo que se va a iniciar.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Start(System.String,Microsoft.Workflow.Client.WorkflowStartParameters)">
+      <summary>Inicia una nueva instancia de un flujo de trabajo especificado.</summary>
+      <returns>Id. de la instancia de flujo de trabajo iniciada.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo que se va a iniciar.</param>
+      <param name="startParameters">Parámetros de inicio del flujo de trabajo.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowManager.Start(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Inicia una nueva instancia de un flujo de trabajo especificado.</summary>
+      <returns>Id. de la instancia de flujo de trabajo iniciada.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo que se va a iniciar.</param>
+      <param name="workflowArguments">Colección de argumentos de flujo de trabajo que se usará para rellenar la colección Content de StartParameters.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowNotFoundException">
+      <summary>Representa la excepción que se muestra cuando el flujo de trabajo del cliente no existe.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotFoundException.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowNotFoundException" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowNotFoundException" />.</summary>
+      <param name="info">Información de serialización.</param>
+      <param name="context">Contexto de transmisión.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotFoundException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowNotFoundException" />.</summary>
+      <param name="message">Mensaje de error.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotFoundException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowNotFoundException" />.</summary>
+      <param name="message">Mensaje de error.</param>
+      <param name="inner">Excepción interna.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowNotification">
+      <summary>Notificación enviada a Windows Azure Workflow para la activación y la mensajería de publicación-suscripción.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotification.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowNotification" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowNotification.Content">
+      <summary>Obtiene o establece Content.</summary>
+      <returns>Content es un diccionario de las propiedades definidas por el usuario pasado a la instancia del flujo de trabajo.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowNotification.MessageId">
+      <summary>Obtiene o establece MessageId.</summary>
+      <returns>MessageId se usa para admitir la idempotencia.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowNotification.Properties">
+      <summary>Obtiene la colección de propiedades.</summary>
+      <returns>Colección de propiedades definidas por el usuario para incluir en la notificación.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowNotification.RequestorId">
+      <summary>Obtiene o establece RequestorId.</summary>
+      <returns>Identificación única opcional del solicitante.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowNotification.SecurityTokens">
+      <summary>Obtiene la colección SecurityTokens.</summary>
+      <returns>SecurityTokens representa una colección de tokens de seguridad que se pasan a la instancia del flujo de trabajo.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowNotificationPublisher">
+      <summary>Representa un editor de notificación de flujo de trabajo.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowNotificationPublisher" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.Abort">
+      <summary>Aborta la notificación de publicación.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.BeginPublishNotificationWithRetry(System.String,Microsoft.Workflow.Client.WorkflowNotification,System.Net.ICredentials,System.String,System.Guid,System.TimeSpan,System.AsyncCallback,System.Object)">
+      <summary>Comienza una notificación de publicación asincrónica cuando vuelve a intentar.</summary>
+      <returns>Objeto que contiene el estado de la operación asincrónica.</returns>
+      <param name="address">Dirección en la que se va a publicar.</param>
+      <param name="notification">Notificación que se va a publicar.</param>
+      <param name="credentials">Credenciales que se van a usar.</param>
+      <param name="userCulture">Referencia cultural del usuario.</param>
+      <param name="traceActivityId">Identificador de actividad de seguimiento.</param>
+      <param name="requestTimeout">Tiempo de espera solicitado.</param>
+      <param name="callback">Método delegado para llamar cuando la operación se completa.</param>
+      <param name="state">Objeto definido por el usuario que especifica el estado de la operación.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.EndPublishNotificationWithRetry(System.IAsyncResult)">
+      <summary>Finaliza una notificación de publicación asincrónica cuando vuelve a intentar.</summary>
+      <returns>true si la operación es correcta; en caso contrario, false.</returns>
+      <param name="result">Objeto que especifica el resultado de la operación de notificación de publicación.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.OnAbort">
+      <summary>Provoca el evento Abort.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.OnPublishNotification(System.String,Microsoft.Workflow.Client.WorkflowNotification,System.Net.ICredentials,System.String,System.Guid,System.TimeSpan)">
+      <summary>Provoca el evento PublishNotification.</summary>
+      <param name="address">Dirección en la que se va a publicar.</param>
+      <param name="notification">Notificación que se va a publicar.</param>
+      <param name="credentials">Credenciales que se van a usar.</param>
+      <param name="userCulture">Referencia cultural del usuario.</param>
+      <param name="traceActivityId">Identificador de actividad de seguimiento.</param>
+      <param name="requestTimeout">Tiempo de espera solicitado.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.OnStart">
+      <summary>Provoca el evento Start.</summary>
+    </member>
+    <member name="E:Microsoft.Workflow.Client.WorkflowNotificationPublisher.PublisherError">
+      <summary>Se produce cuando hay un error del editor.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.PublishNotification(System.String,Microsoft.Workflow.Client.WorkflowNotification,System.Net.ICredentials,System.String,System.Guid,System.TimeSpan)">
+      <summary>Publica la notificación en la dirección especificada.</summary>
+      <param name="address">Dirección en la que se va a publicar.</param>
+      <param name="notification">Notificación que se va a publicar.</param>
+      <param name="credentials">Credenciales que se van a usar.</param>
+      <param name="userCulture">Referencia cultural del usuario.</param>
+      <param name="traceActivityId">Identificador de actividad de seguimiento.</param>
+      <param name="requestTimeout">Tiempo de espera solicitado.</param>
+    </member>
+    <member name="E:Microsoft.Workflow.Client.WorkflowNotificationPublisher.PublishNotificationComplete">
+      <summary>Se produce cuando se completa la notificación de publicación.</summary>
+    </member>
+    <member name="E:Microsoft.Workflow.Client.WorkflowNotificationPublisher.PublishNotificationError">
+      <summary>Se produce cuando hay un error de notificación de publicación.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.ReportPublisherError(Microsoft.Workflow.Client.PublisherErrorEventArgs)">
+      <summary>Informa del error del editor a todos los controladores registrados del evento PublisherError.</summary>
+      <param name="eventArgs">Objeto que proporciona datos para el evento PublisherError.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.ReportPublishNotificationComplete(Microsoft.Workflow.Client.PublishNotificationCompleteEventArgs)">
+      <summary>Informa de la notificación de publicación a todos los controladores registrados del evento PublishNotificationComplete.</summary>
+      <param name="eventArgs">Objeto que proporciona datos para el evento PublishNotificationComplete.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.ReportPublishNotificationError(Microsoft.Workflow.Client.PublishNotificationErrorEventArgs)">
+      <summary>Informa de la notificación de publicación a todos los controladores registrados del evento PublishNotificationError.</summary>
+      <param name="eventArgs">Objeto que proporciona datos para el evento PublishNotificationError.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowNotificationPublisher.Start">
+      <summary>Inicia el editor de notificación.</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowResourceManager">
+      <summary>Administra recursos para desarrolladores para la creación de flujos de trabajo en SharePoint 2010.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.#ctor(System.Uri)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowResourceManager" />.</summary>
+      <param name="baseUri">URI base del administrador.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.#ctor(System.Uri,Microsoft.Workflow.Client.ClientSettings)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowResourceManager" /> con el URI base y la configuración del ámbito especificados.</summary>
+      <param name="baseUri">URI base del administrador.</param>
+      <param name="settings">Configuración del cliente.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowResourceManager.BaseUri">
+      <summary>Obtiene o establece el URI base del administrador.</summary>
+      <returns>URI base del administrador.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteActivities">
+      <summary>Elimina las actividades asociadas con el administrador.</summary>
+      <returns>Actividades eliminadas.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteActivities(System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Elimina las actividades asociadas con el administrador mediante un filtro de metadatos.</summary>
+      <returns>Actividades eliminadas.</returns>
+      <param name="metadataFilter">El filtro de metadatos.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteActivities(System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)">
+      <summary>Elimina las actividades asociadas con el administrador y termina instancias dependientes usando también un filtro de metadatos.</summary>
+      <returns>Actividades eliminadas.</returns>
+      <param name="metadataFilter">El filtro de metadatos.</param>
+      <param name="terminateDependentInstances">true para terminar instancias dependientes; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteActivity(System.String)">
+      <summary>Elimina una actividad específica asociada con el administrador.</summary>
+      <param name="activityName">Nombre de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteActivity(System.String,System.Boolean)">
+      <summary>Elimina una actividad específica asociada con el administrador.</summary>
+      <param name="activityName">Nombre de la actividad.</param>
+      <param name="terminateDependentInstances">true para terminar las instancias dependientes; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteScope">
+      <summary>Elimina un ámbito asociado con el administrador.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteScope(System.String)">
+      <summary>Elimina un ámbito asociado con el administrador.</summary>
+      <param name="childScopeName">Nombre del ámbito.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteWorkflow(System.String)">
+      <summary>Elimina un flujo de trabajo específico asociado con el administrador.</summary>
+      <param name="workflowName">Nombre del flujo de trabajo.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteWorkflow(System.String,System.Boolean)">
+      <summary>Elimina un flujo de trabajo específico asociado con el administrador.</summary>
+      <param name="workflowName">Nombre del flujo de trabajo.</param>
+      <param name="terminateActiveInstances">true para terminar instancias activas; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteWorkflows">
+      <summary>Elimina los flujos de trabajo asociados con el administrador.</summary>
+      <returns>Los flujos de trabajo eliminados.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteWorkflows(System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Elimina los flujos de trabajo especificados asociados con el administrador mediante un filtro de metadatos.</summary>
+      <returns>Los flujos de trabajo eliminados.</returns>
+      <param name="metadataFilter">El filtro de metadatos.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.DeleteWorkflows(System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)">
+      <summary>Elimina los flujos de trabajo especificados asociados con el administrador y termina instancias activas usando también un filtro de metadatos.</summary>
+      <returns>Los flujos de trabajo eliminados.</returns>
+      <param name="metadataFilter">El filtro de metadatos.</param>
+      <param name="terminateActiveInstances">true para terminar instancias activas; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetActivities">
+      <summary>Obtiene las actividades asociadas con el administrador.</summary>
+      <returns>Actividades asociadas con el administrador.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetActivities(System.Int32,System.Int32)">
+      <summary>Obtiene las actividades asociadas con el administrador.</summary>
+      <returns>Actividades asociadas con el administrador.</returns>
+      <param name="skip">Parámetro de omisión.</param>
+      <param name="count">Parámetro de recuento.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetActivities(System.Int32,System.Int32,System.Boolean)">
+      <summary>Obtiene las actividades asociadas con el administrador, incluidos los objetos XAML.</summary>
+      <returns>Actividades asociadas con el administrador.</returns>
+      <param name="skip">Parámetro de omisión.</param>
+      <param name="count">Parámetro de recuento.</param>
+      <param name="includeXaml">true para incluir objetos XAML; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetActivities(System.Int32,System.Int32,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Obtiene las actividades asociadas con el administrador, incluidos los objetos XAML usando el filtro de metadatos.</summary>
+      <returns>Actividades asociadas con el administrador.</returns>
+      <param name="skip">Parámetro de omisión.</param>
+      <param name="count">Parámetro de recuento.</param>
+      <param name="includeXaml">true para incluir objeto XAML; en caso contrario, false.</param>
+      <param name="metadataFilter">El filtro de metadatos.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetActivity(System.String)">
+      <summary>Obtiene la actividad especificada del administrador.</summary>
+      <returns>Actividad especificada del administrador.</returns>
+      <param name="activityName">Nombre de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetChildScopes">
+      <summary>Obtiene los ámbitos secundarios asociados con el administrador.</summary>
+      <returns>Ámbitos secundarios asociados con el administrador.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetChildScopes(System.Int32,System.Int32)">
+      <summary>Obtiene los ámbitos secundarios asociados con el administrador.</summary>
+      <returns>Ámbitos secundarios asociados con el administrador.</returns>
+      <param name="skip">Parámetro de omisión.</param>
+      <param name="count">Parámetro de recuento.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetChildScopes(System.Int32,System.Int32,Microsoft.Workflow.Client.ScopeStatus)">
+      <summary>Obtiene los ámbitos secundarios asociados con el administrador con su estado.</summary>
+      <returns>Ámbitos secundarios asociados con el administrador.</returns>
+      <param name="skip">Parámetro de omisión.</param>
+      <param name="count">Parámetro de recuento.</param>
+      <param name="scopeStatus">Estado del ámbito.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetScope">
+      <summary>Obtiene el ámbito del administrador.</summary>
+      <returns>Ámbito del administrador.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetScope(System.String)">
+      <summary>Obtiene el ámbito del administrador.</summary>
+      <returns>Ámbito del administrador.</returns>
+      <param name="childScopeName">Nombre del ámbito secundario.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetUriForChildScope(System.String)">
+      <summary>Obtiene el URI del ámbito secundario.</summary>
+      <returns>URI del ámbito secundario.</returns>
+      <param name="childScopeName">Nombre del ámbito secundario asociado con el administrador.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetWorkflow(System.String)">
+      <summary>Obtiene el flujo de trabajo del administrador.</summary>
+      <returns>Flujo de trabajo del administrador.</returns>
+      <param name="workflowName">Nombre del flujo de trabajo.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.GetWorkflows(System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>Obtiene los flujos de trabajo especificados del administrador.</summary>
+      <returns>Los flujos de trabajo del administrador.</returns>
+      <param name="skip">Parámetro de omisión.</param>
+      <param name="count">Parámetro de recuento.</param>
+      <param name="metadataFilter">El filtro de metadatos.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishActivities(System.Collections.Generic.IEnumerable{Microsoft.Workflow.Client.ActivityDescription})">
+      <summary>Publica las actividades asociadas con el administrador.</summary>
+      <returns>Actividades publicadas.</returns>
+      <param name="descriptions">Colección de descripciones de actividades.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishActivities(System.Collections.Generic.IEnumerable{Microsoft.Workflow.Client.ActivityDescription},System.Boolean)">
+      <summary>Publica las actividades asociadas con el administrador.</summary>
+      <returns>Actividades publicadas.</returns>
+      <param name="descriptions">Colección de descripciones de actividades.</param>
+      <param name="validateOnly">true si solo se publicarán las actividades validadas; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishActivities(System.Collections.Generic.IEnumerable{Microsoft.Workflow.Client.ActivityDescription},System.Boolean,System.Boolean)">
+      <summary>Publica las actividades asociadas con el administrador.</summary>
+      <returns>Actividades publicadas.</returns>
+      <param name="descriptions">Colección de descripciones de actividades.</param>
+      <param name="validateOnly">true si solo se publicarán las actividades validadas; en caso contrario, false.</param>
+      <param name="terminateDependentInstances">true para terminar instancias dependientes; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishActivity(Microsoft.Workflow.Client.ActivityDescription)">
+      <summary>Publica una actividad.</summary>
+      <returns>Actividad publicada.</returns>
+      <param name="description">Descripción de la actividad.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishActivity(Microsoft.Workflow.Client.ActivityDescription,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>Publica una actividad.</summary>
+      <returns>Actividad publicada.</returns>
+      <param name="description">Descripción de la actividad.</param>
+      <param name="validateOnly">true si solo se publicarán las actividades validadas; en caso contrario, false.</param>
+      <param name="overwriteXClassName">true para sobrescribir el nombre de clase; en caso contrario, false.</param>
+      <param name="terminateDependentInstances">true para terminar las instancias dependientes; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishScope(Microsoft.Workflow.Client.ScopeInfo)">
+      <summary>Publica un ámbito con la <see cref="T:Microsoft.Workflow.Client.ScopeInfo" /> especificada.</summary>
+      <returns>Ámbito publicado.</returns>
+      <param name="scopeInfo">Información relativa al ámbito.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishScope(Microsoft.Workflow.Client.ScopeInfo,System.String)">
+      <summary>Publica un ámbito.</summary>
+      <returns>Ámbito publicado.</returns>
+      <param name="scopeInfo">Información relativa al ámbito.</param>
+      <param name="childScopeName">Nombre del ámbito.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishWorkflow(Microsoft.Workflow.Client.WorkflowDescription)">
+      <summary>Publica un flujo de trabajo.</summary>
+      <returns>Flujo de trabajo publicado.</returns>
+      <param name="description">La <see cref="T:Microsoft.Workflow.Client.WorkflowDescription" />.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.PublishWorkflow(Microsoft.Workflow.Client.WorkflowDescription,System.Boolean)">
+      <summary>Publica un flujo de trabajo.</summary>
+      <returns>Flujo de trabajo publicado.</returns>
+      <param name="description">La <see cref="T:Microsoft.Workflow.Client.WorkflowDescription" />.</param>
+      <param name="terminateActiveInstances">true para terminar instancias activas; en caso contrario, false.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.ResumeScope">
+      <summary>Reanuda un ámbito.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.ResumeScope(System.String)">
+      <summary>Reanuda un ámbito especificado.</summary>
+      <param name="childScopeName">Nombre del ámbito.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowResourceManager.ScopeRevision">
+      <summary>Obtiene la revisión del ámbito del administrador.</summary>
+      <returns>Revisión del ámbito del administrador.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.SuspendScope">
+      <summary>Suspende un ámbito asociado con el administrador.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceManager.SuspendScope(System.String)">
+      <summary>Suspende un ámbito especificado asociado con el administrador.</summary>
+      <param name="childScopeName">Nombre del ámbito.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowResourceNotFoundException">
+      <summary>Excepción que se muestra cuando el recurso de flujos de trabajo no se encuentra.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceNotFoundException.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowResourceNotFoundException" /> con valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowResourceNotFoundException" /> con datos serializados.</summary>
+      <param name="info">Objeto que contiene la información serializada sobre la excepción.</param>
+      <param name="context">Información contextual acerca del origen o del destino.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceNotFoundException.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowResourceNotFoundException" /> con un mensaje de error.</summary>
+      <param name="message">Mensaje de error que describe la excepción.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowResourceNotFoundException.#ctor(System.String,System.Exception)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowResourceNotFoundException" /> con mensaje de error y excepción interna.</summary>
+      <param name="message">Mensaje de error que describe la excepción.</param>
+      <param name="inner">Excepción interna que es la causa de la excepción actual.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowResourceNotFoundException.ResourceName">
+      <summary>Obtiene o establece el nombre del recurso.</summary>
+      <returns>Nombre del recurso.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowResourceNotFoundException.ScopePath">
+      <summary>Obtiene o establece la ruta de acceso del ámbito.</summary>
+      <returns>Ruta de acceso del ámbito.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowServiceManager">
+      <summary>Representa una clase de cliente para configurar y actualizar una instalación de Windows Azure Workflow.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.#ctor(System.Uri,Microsoft.Workflow.Client.ClientSettings)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowServiceManager" />.</summary>
+      <param name="baseUri">Dirección de URI base del servicio de flujo de trabajo.</param>
+      <param name="settings">Configuración del servicio de flujo de trabajo.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.AddOutboundCertificateReference(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+      <summary>Agrega la configuración saliente para el certificado X.509.</summary>
+      <param name="certificate">Configuración saliente para el certificado X.509.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.CheckUpgradeStatus">
+      <summary>Comprueba el estado de la actualización del sistema.</summary>
+      <returns>Objeto que contiene la respuesta sobre el estado de la actualización del sistema.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.CompleteUpgrade">
+      <summary>Completa la solicitud para la actualización del sistema.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.GetOutboundCertificateReferences">
+      <summary>Devuelve referencias del certificado saliente.</summary>
+      <returns>Referencias del certificado saliente.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.GetServiceConfiguration(System.String)">
+      <summary>Devuelve la configuración del servicio de flujo de trabajo.</summary>
+      <returns>Configuración del servicio de flujo de trabajo.</returns>
+      <param name="configName">Nombre de la configuración.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.InitiateUpgrade">
+      <summary>Inicia la solicitud para la actualización del sistema.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.RemoveOutboundCertificateReference(System.String)">
+      <summary>Quita la configuración saliente para el certificado X.509.</summary>
+      <param name="thumbprint">Huella digital del certificado X.509.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowServiceManager.SetServiceConfiguration(System.String,System.String)">
+      <summary>Establece la entrada de configuración del servicio con el valor especificado.</summary>
+      <param name="configName">Nombre de la entrada de configuración que se va a establecer.</param>
+      <param name="configValue">Valor de la entrada de configuración que se va a establecer.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowStartInfo">
+      <summary>Obsoleto</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowStartInfo.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowStartInfo" />.</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.WorkflowStartParameters">
+      <summary>Conjunto de parámetros usados para iniciar explícitamente una instancia de flujo de trabajo</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.WorkflowStartParameters.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.WorkflowStartParameters" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowStartParameters.ActivationParameters">
+      <summary>Obtiene o establece ActivationParameters.</summary>
+      <returns>Representa los parámetros de activación que están enlazados a la instancia de flujo de trabajo InArgs y External Variables.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowStartParameters.Content">
+      <summary>Obtiene el diccionario Content.</summary>
+      <returns>Content es un diccionario de las propiedades definidas por el usuario pasado a la instancia del flujo de trabajo.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.WorkflowStartParameters.SecurityTokens">
+      <summary>Obtiene la colección SecurityTokens.</summary>
+      <returns>SecurityTokens representa una colección de tokens de seguridad que se pasan a la instancia del flujo de trabajo.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.ClientPermissions">
+      <summary>Representa los permisos concedidos a un cliente.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.ClientPermissions.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.ClientPermissions" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.ClientPermissions.ClientPrincipalId">
+      <summary>Obtiene o establece la identidad principal del cliente.</summary>
+      <returns>Identidad principal configurada del cliente.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.ClientPermissions.GrantedPermissions">
+      <summary>Obtiene o establece los permisos concedidos al cliente.</summary>
+      <returns>Permisos concedidos al cliente.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.ClientPermissions.Permissions">
+      <summary>Obtiene o establece los permisos del ámbito concedidos al cliente.</summary>
+      <returns>Permisos del ámbito concedidos al cliente.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2SAccessControlServiceSettings">
+      <summary>Representa la configuración del extremo de OAuth2 S2S del servicio de control de acceso.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SAccessControlServiceSettings.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2SAccessControlServiceSettings" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SAccessControlServiceSettings.StsPrincipalId">
+      <summary>Obtiene o establece la identidad principal del servicio de token de seguridad.</summary>
+      <returns>Identidad principal del servicio de token de seguridad.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SAccessControlServiceSettings.StsUri">
+      <summary>Obtiene o establece el URI del extremo del servicio de token de seguridad.</summary>
+      <returns>URI del extremo del servicio de token de seguridad.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2SAppSettings">
+      <summary>Configuración de la aplicación para habilitar la seguridad OAuth2 S2S usando el servicio de control de acceso.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SAppSettings.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2SAppSettings" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SAppSettings.AccessControlServiceSettings">
+      <summary>Obtiene o establece la configuración del servicio de control de acceso de destino.</summary>
+      <returns>Devuelve la configuración del servicio de control de acceso de destino.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SAppSettings.ApplicationId">
+      <summary>Obtiene o establece el id. de aplicación para el ámbito.</summary>
+      <returns>Devuelve el id. de aplicación para el ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SAppSettings.RemoteServicePrincipalId">
+      <summary>Obtiene o establece el id. principal del servicio remoto.</summary>
+      <returns>Devuelve el id. principal del servicio remoto.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge">
+      <summary>Desafío OAuth2 S2S que se va a emitir para solicitudes no autenticadas.  Se incluirá con el código de respuesta HTTP 401.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge.GetParameter(System.String)">
+      <summary>Devuelve el parámetro de desafío por nombre.</summary>
+      <returns>Devuelve el valor del parámetro de desafío de destino.</returns>
+      <param name="name">Nombre del parámetro que se va a devolver.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge.Realm">
+      <summary>Obtiene el valor de dominio configurado en el ámbito.</summary>
+      <returns>Devuelve el valor de dominio configurado en el ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge.Scheme">
+      <summary>Obtiene el esquema de URI usado para este ámbito.</summary>
+      <returns>Devuelve el esquema de URI usado para este ámbito.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge.ToString">
+      <summary>Da formato al desafío como cadena.</summary>
+      <returns>Devuelve el valor del desafío.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge.TrustedIssuers">
+      <summary>Obtiene la lista de emisores de confianza asignados a este ámbito.</summary>
+      <returns>Devuelve la lista de emisores de confianza asignados a este ámbito.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2SCredential">
+      <summary>Representa una credencial para una identidad OAuth2 S2S.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SCredential.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2SCredential" /> usando el id. de cliente especificado.</summary>
+      <param name="clientId">Identificador del cliente.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SCredential.ClientId"></member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SCredential.ContainsUserClaims">
+      <summary>Obtiene si la credencial contiene o no notificaciones de usuario delegado.</summary>
+      <returns>true si la credencial contiene notificaciones de usuario delegado; en caso contrario, false.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SCredential.GetAuthorization(Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge[],System.Net.HttpWebRequest)">
+      <summary>Obtiene la solicitud de autorización.</summary>
+      <returns>Solicitud de <see cref="T:System.Net.Authorization" />.</returns>
+      <param name="bearerChallenges">Lista de desafíos en la respuesta HTTP 401.</param>
+      <param name="request">Solicitud HTTP en la que se va a incluir el token.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SCredential.GetNotBeforeDateTime">
+      <summary>Obtiene el valor de la notificación NotBefore.</summary>
+      <returns>Devuelve el valor de la notificación NotBefore como un valor de DateTime.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SCredential.OnBehalfOf">
+      <summary>Obtiene o establece el valor de la identidad de usuario delegado.</summary>
+      <returns>Valor de la identidad de usuario delegado.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SCredential.SelectChallenge(System.Collections.Generic.IList{Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge})">
+      <summary>Selecciona el desafío de autenticación que se va a usar.</summary>
+      <returns>Desafío de autenticación que se va a usar.</returns>
+      <param name="bearerChallenges">Lista de desafíos en la respuesta HTTP 401.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SCredential.UserClaims">
+      <summary>Obtiene la lista de notificaciones de usuario delegado.</summary>
+      <returns>Lista de notificaciones de usuario delegado.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2SDiscoveryCredential">
+      <summary>Representa una credencial de detección para la identidad OAuth S2S.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SDiscoveryCredential.#ctor(System.String,System.Uri,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2SDiscoveryCredential" />.</summary>
+      <param name="clientPrincipal">Entidad de seguridad del cliente.</param>
+      <param name="stsMetadataUri">URI de metadatos STS.</param>
+      <param name="signingCertificate">Certificado de firma.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SDiscoveryCredential.GetAuthorization(Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge[],System.Net.HttpWebRequest)">
+      <summary>Obtiene la solicitud de autorización.</summary>
+      <returns>Solicitud de autorización.</returns>
+      <param name="bearerChallenges">Lista de desafíos en la respuesta HTTP 401.</param>
+      <param name="request">Solicitud HTTP en la que se va a incluir el token.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SDiscoveryCredential.MetadataCacheDuration">
+      <summary>Obtiene o establece la duración de la caché de metadatos.</summary>
+      <returns>Duración de la caché de metadatos.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration">
+      <summary>Especifica una configuración de seguridad basada en OAuth2 S2S para el ámbito que admite la delegación basada en notificaciones.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration" />.</summary>
+      <param name="name">Nombre único de la configuración de seguridad del ámbito.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration.ClientPermissions">
+      <summary>Obtiene el conjunto de permisos del ámbito concedidos al cliente.</summary>
+      <returns>Devuelve el conjunto de permisos del ámbito concedidos al cliente.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration.ForMergingOnly">
+      <summary>Obtiene o establece si esta configuración de seguridad debería solo combinarse con configuraciones de seguridad de ámbito principales o no.</summary>
+      <returns>Devuelve un booleano que indica si esta configuración de seguridad es solo para combinar o no.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration.Realm">
+      <summary>Obtiene o establece el valor de dominio que se va a usar en el desafío de respuesta HTTP 401.</summary>
+      <returns>Devuelve una cadena que representa el valor de dominio.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration.TrustedIssuer">
+      <summary>Obtiene o establece el emisor de confianza para este ámbito</summary>
+      <returns>Devuelve el valor de emisor de confianza configurado en este ámbito.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SSecurityConfiguration.WorkflowApplicationSettings">
+      <summary>Obtiene o establece la configuración de la aplicación de flujo de trabajo para flujos de trabajo que se ejecutan en este ámbito.</summary>
+      <returns>Devuelve la configuración de la aplicación de flujo de trabajo para flujos de trabajo que se ejecutan en este ámbito.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2SSecurityTokenServiceCredential">
+      <summary>Credencial para llamar a un servicio de token de seguridad mediante OAuth2 S2S.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SSecurityTokenServiceCredential.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Uri,System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2SSecurityTokenServiceCredential" />.</summary>
+      <param name="clientId">Identidad del cliente que se va a usar para llamar al STS.</param>
+      <param name="realm">Dominio del cliente.</param>
+      <param name="signingCertificate">Certificado usado para firmar el token que autentica el STS.</param>
+      <param name="stsUri">URI del STS.</param>
+      <param name="stsPrincipalId">Identidad principal de destino del STS.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SSecurityTokenServiceCredential.GetAuthorization(Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge[],System.Net.HttpWebRequest)"></member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SSecurityTokenServiceCredential.SigningCertificate">
+      <summary>Obtiene o establece el certificado usado para firmar el token que autentica el STS.</summary>
+      <returns>Devuelve la huella digital del certificado.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2SSelfIssuedCredential">
+      <summary>Credencial para crear un token autofirmado.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SSelfIssuedCredential.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2,System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2SSelfIssuedCredential" />.</summary>
+      <param name="clientId">Identidad del cliente para que se va a usar para el token.</param>
+      <param name="realm">Dominio del cliente.</param>
+      <param name="signingCertificate">Certificado usado para firmar el token.</param>
+      <param name="issuer">Valor del emisor que se va a especificar para el token.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SSelfIssuedCredential.ExpirationDuration">
+      <summary>Obtiene o establece el valor de expiración del token.</summary>
+      <returns>Devuelve la duración hasta que el token expira.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2SSelfIssuedCredential.GetAuthorization(Microsoft.Workflow.Client.Security.OAuthS2SAuthenticationChallenge[],System.Net.HttpWebRequest)"></member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2SSelfIssuedCredential.SigningCertificate">
+      <summary>Obtiene o establece el certificado usado para firmar el token.</summary>
+      <returns>Devuelve la huella digital del certificado.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthS2STrustedIssuer">
+      <summary>Especifica un emisor de confianza para OAuth2 S2S.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthS2STrustedIssuer.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthS2STrustedIssuer" />.</summary>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2STrustedIssuer.DiscoverRemoteServicePrincipalId">
+      <summary>Obtiene o establece si se detecta automáticamente o no el id. principal del servicio remoto usando un desafío de respuesta HTTP 401.</summary>
+      <returns>Devuelve un booleano.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2STrustedIssuer.IssuerName">
+      <summary>Obtiene o establece el nombre del emisor.</summary>
+      <returns>Devuelve el valor del emisor.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2STrustedIssuer.MetadataEndpointUri">
+      <summary>Obtiene o establece el URI del extremo de metadatos del emisor de confianza.</summary>
+      <returns>Devuelve el URI del extremo de metadatos.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthS2STrustedIssuer.PublicKeyCertificates">
+      <summary>Obtiene una lista de claves públicas para comprobar el emisor de confianza.</summary>
+      <returns>Devuelve una lista de claves públicas.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.OAuthWrapSecurityConfiguration">
+      <summary>Representa la configuración de seguridad WRAP de OAuth.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthWrapSecurityConfiguration.#ctor">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthWrapSecurityConfiguration" /> usando valores predeterminados.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.OAuthWrapSecurityConfiguration.#ctor(System.String)">
+      <summary>Inicia una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.OAuthWrapSecurityConfiguration" /> mediante el nombre especificado.</summary>
+      <param name="name">Nombre de la configuración.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.OAuthWrapSecurityConfiguration.SigningKey">
+      <summary>Obtiene o establece la clave de firma de <see cref="T:Microsoft.Workflow.Client.Security.OAuthWrapSecurityConfiguration" />.</summary>
+      <returns>Clave de firma de <see cref="T:Microsoft.Workflow.Client.Security.OAuthWrapSecurityConfiguration" />.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.ScopePermissions">
+      <summary>Permisos concedidos por la configuración de seguridad del ámbito.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.ScopePermissions.None">
+      <summary>No especifica permisos.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.ScopePermissions.ReadScope">
+      <summary>Especifica el permiso ReadScope.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.ScopePermissions.WriteScope">
+      <summary>Especifica el permiso WriteScope.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.ScopePermissions.ManageScope">
+      <summary>Especifica el permiso ManageScope.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.ScopePermissions.PublishNotification">
+      <summary>Especifica el permiso PublishNotification.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.ScopePermissions.All">
+      <summary>Especifica todos los permisos.</summary>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.ScopeSecurityConfiguration">
+      <summary>Representa la configuración de seguridad del ámbito.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.ScopeSecurityConfiguration.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.ScopeSecurityConfiguration" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.ScopeSecurityConfiguration.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.ScopeSecurityConfiguration" />.</summary>
+      <param name="name">Nombre de la configuración.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.ScopeSecurityConfiguration.Name">
+      <summary>Obtiene o establece el nombre de la configuración.</summary>
+      <returns>Nombre de la configuración.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule">
+      <summary>Representa un módulo de autenticación WRAP de token web simple.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)">
+      <summary>Devuelve una instancia de la clase <see cref="T:System.Net.Authorization" /> en respuesta a un desafío de autenticación de un servidor.</summary>
+      <returns>Una instancia de la clase <see cref="T:System.Net.Authorization" /> en respuesta a un desafío de autenticación de un servidor.</returns>
+      <param name="challenge">El desafío de autenticación enviado por el servidor.</param>
+      <param name="request">La instancia de <see cref="T:System.Net.WebRequest" /> asociada con el desafío.</param>
+      <param name="credentials">Las credenciales asociadas con el desafío.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule.AuthenticationType">
+      <summary>Obtiene un tipo de autenticación proporcionado por este módulo de autenticación.</summary>
+      <returns>Tipo de autenticación proporcionado por este módulo de autenticación.</returns>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule.CanPreAuthenticate">
+      <summary>Obtiene un valor que indica si el módulo de autenticación admite la autenticación previa.</summary>
+      <returns>true si el módulo de autorización admite la autenticación previa; en caso contrario, false.</returns>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule.CreateAcsClientModule(System.Uri)">
+      <summary>Crea un módulo de autenticación ACS.</summary>
+      <returns>Un módulo de autenticación ACS.</returns>
+      <param name="accessControlServiceUri">El URI de servicio de control de acceso.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule.CreateSelfSigningClientModule(System.String,System.String[])">
+      <summary>Crea un módulo de autenticación autofirmada.</summary>
+      <returns>Módulo de autenticación autofirmada.</returns>
+      <param name="accessControlSymmetricKey">Clave simétrica de control de acceso.</param>
+      <param name="roles">Matriz de roles.</param>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.SimpleWebTokenWrapAuthenticationModule.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)">
+      <summary>Devuelve una instancia de la clase <see cref="T:System.Net.Authorization" /> de una solicitud de autenticación para un servidor.</summary>
+      <returns>Una instancia de <see cref="T:System.Net.Authorization" /> que contiene el mensaje de autorización de la solicitud.</returns>
+      <param name="request">La instancia de <see cref="T:System.Net.WebRequest" /> asociada con la solicitud de autenticación.</param>
+      <param name="credentials">Las credenciales asociadas con la solicitud de autenticación.</param>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.WindowsSecurityConfiguration">
+      <summary>Especifica la autenticación de Windows y la autorización para la configuración del ámbito.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.WindowsSecurityConfiguration.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.WindowsSecurityConfiguration" />.</summary>
+    </member>
+    <member name="M:Microsoft.Workflow.Client.Security.WindowsSecurityConfiguration.#ctor(System.String)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Workflow.Client.Security.WindowsSecurityConfiguration" />.</summary>
+      <param name="name">Nombre de la configuración.</param>
+    </member>
+    <member name="P:Microsoft.Workflow.Client.Security.WindowsSecurityConfiguration.WorkflowAdminGroupName">
+      <summary>Obtiene o establece el nombre del grupo Windows al que se le concederán todos los ScopePermissions.</summary>
+      <returns>Nombre del grupo de Windows configurado.</returns>
+    </member>
+    <member name="T:Microsoft.Workflow.Client.Security.WorkflowManagementPermissions">
+      <summary>Especifica una enumeración de permisos de administración.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.WorkflowManagementPermissions.None">
+      <summary>Sin permiso de administración.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.WorkflowManagementPermissions.ReadScope">
+      <summary>Permiso de administración de ReadScope.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.WorkflowManagementPermissions.WriteScope">
+      <summary>Permiso de administración de WriteScope.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.WorkflowManagementPermissions.ManageScope">
+      <summary>Permiso de administración de ManageScope.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.WorkflowManagementPermissions.PublishNotification">
+      <summary>Permiso de administración de PublishNotification.</summary>
+    </member>
+    <member name="F:Microsoft.Workflow.Client.Security.WorkflowManagementPermissions.All">
+      <summary>Todos los permisos de administración.</summary>
+    </member>
+  </members>
+</doc>
